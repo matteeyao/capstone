@@ -1,4 +1,4 @@
-FROM ruby:2.6.3-stretch
+FROM ruby:2.7.5
 
 RUN apt-get update \
   && apt-get install -y nodejs postgresql-client
@@ -7,7 +7,6 @@ RUN mkdir /myapp
 WORKDIR /myapp
 COPY Gemfile /myapp/Gemfile
 COPY Gemfile.lock /myapp/Gemfile.lock
-RUN gem install bundler:2.1.4
 RUN bundle install
 COPY . /myapp
 
