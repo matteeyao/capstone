@@ -5,6 +5,6 @@
     "bootstrap": "~>4.1.2"
   },
   "version": "1.0.0",
-  "repository": "git@github.com:CircleCI-Public/circleci-demo-ruby-rails.git",
+  "repository": "git@github.com:matteeyao/capstone.git",
   "author": "Matt Yao <myao@8thlight.com>"
 }
