@@ -1,4 +1,4 @@
-# Capstone Project [![CircleCI](https://circleci.com/gh/CircleCI-Public/circleci-demo-ruby-rails.svg?style=svg)](https://circleci.com/gh/CircleCI-Public/circleci-demo-ruby-rails)
+# Capstone Project [![CircleCI](https://circleci.com/gh/matteeyao/capstone/tree/main.svg?style=svg)](https://circleci.com/gh/matteeyao/capstone/tree/main)
 
 This is an example application showcasing how to run a Ruby on Rails app on CircleCI 2.0.
 
