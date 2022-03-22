@@ -2,14 +2,14 @@
 
 require 'rails_helper'
 
-RSpec.describe Post, type: :model do
+RSpec.describe Transaction, type: :model do
   # This should return the minimal set of attributes required to create a valid
-  # Post. As you add validations to Post, be sure to
+  # Transaction. As you add validations to Transaction, be sure to
   # adjust the attributes here as well.
   let(:valid_attributes) do
     {
-      title: 'A new blog post',
-      body: 'The body of the post'
+      title: 'A new ledger transaction',
+      body: 'The body of the transaction'
     }
   end
 
@@ -20,18 +20,18 @@ RSpec.describe Post, type: :model do
     }
   end
 
-  describe 'an valid post' do
+  describe 'an valid transaction' do
     it {
-      post = Post.new valid_attributes
-      expect(post.valid?).to be_truthy
-      expect { post.save }.to change { Post.count }.by(1)
+      transaction = Transaction.new valid_attributes
+      expect(transaction.valid?).to be_truthy
+      expect { transaction.save }.to change { Transaction.count }.by(1)
     }
   end
 
-  describe 'an invalid post' do
+  describe 'an invalid transaction' do
     it {
-      post = Post.new invalid_attributes
-      expect(post.valid?).to be_falsey
+      transaction = Transaction.new invalid_attributes
+      expect(transaction.valid?).to be_falsey
     }
   end
 end
