@@ -1,0 +1,10 @@
+{
+  "name": "capstone",
+  "private": true,
+  "dependencies": {
+    "bootstrap": "~>4.3.1"
+  },
+  "version": "1.0.0",
+  "repository": "git@github.com:matteeyao/capstone.git",
+  "author": "Matt Y <myao@8thlight.com>"
+}
