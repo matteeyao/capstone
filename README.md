@@ -27,6 +27,12 @@ $ docker-compose up
 $ docker-compose run web bundle exec rails db:migrate:reset
 ```
 
+### run tests
+
+```
+$ docker-compose run web bundle exec rspec
+```
+
 ### reset the database
 
 ```
