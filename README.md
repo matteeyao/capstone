@@ -1,4 +1,4 @@
-# Capstone Project [![CircleCI](https://circleci.com/gh/matteeyao/capstone/tree/main.svg?style=svg)](https://circleci.com/gh/matteeyao/capstone/tree/main)
+# Capstone Project [![CircleCI](https://circleci.com/gh/matteeyao/capstone-backend/tree/main.svg?style=svg)](https://circleci.com/gh/matteeyao/capstone-backend/tree/main)
 
 ## Local Development
 
