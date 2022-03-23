@@ -98,3 +98,5 @@ About
 
 # Ignore env files
 *.env
+
+.byebug_history
