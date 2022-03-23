@@ -26,7 +26,7 @@ default: &default
 
 development:
   <<: *default
-  database: rails_blog_dev
+  database: rails_ledger_dev
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
@@ -62,7 +62,7 @@ test:
   <<: *default
   user: <%= ENV.fetch("PGUSER") %>
   user: <%= ENV.fetch("PGPASSWORD") %>
-  database: rails_blog_test
+  database: rails_ledger_test
 
 # As with config/secrets.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is

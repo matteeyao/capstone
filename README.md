@@ -16,7 +16,7 @@ RAILS_ENV=development
 ```
 POSTGRES_USER=postgres
 POSTGRES_PASSWORD=postgres
-POSTGRES_DB=rails_blog_dev
+POSTGRES_DB=rails_ledger_dev
 ```
 
 ### Starting the application
@@ -27,10 +27,34 @@ $ docker-compose up
 $ docker-compose run web bundle exec rails db:migrate:reset
 ```
 
+### run tests
+
+```
+$ docker-compose run web bundle exec rspec
+```
+
 ### reset the database
 
 ```
 $ docker-compose up db
+$ docker-compose run web bundle exec rails db:migrate:reset
+```
+
+### run rails console
+
+```
+$ docker-compose run web rails c
+```
+
+### generate migration
+
+```
+docker-compose run web bundle exec rails g migration <migrationName>
+```
+
+... and then run:
+
+```
 $ docker-compose run web bundle exec rails db:migrate:reset
 ```
 
