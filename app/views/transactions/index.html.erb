@@ -5,9 +5,12 @@
 <table>
   <thead>
     <tr>
-      <th>Title</th>
-      <th>Body</th>
-      <th>Published</th>
+      <th>Address</th>
+      <th>Transaction Hash</th>
+      <th>From</th>
+      <th>To</th>
+      <th>Summary</th>
+      <th>Location</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -15,9 +18,12 @@
   <tbody>
     <% @transactions.each do |transaction| %>
       <tr>
-        <td><%= transaction.title %></td>
-        <td><%= transaction.body %></td>
-        <td><%= transaction.published %></td>
+        <td><%= transaction.address %></td>
+        <td><%= transaction.txn_hash %></td>
+        <td><%= transaction.from %></td>
+        <td><%= transaction.to %></td>
+        <td><%= transaction.summary %></td>
+        <td><%= transaction.location %></td>
         <td><%= link_to 'Show', transaction %></td>
         <td><%= link_to 'Edit', edit_transaction_path(transaction) %></td>
         <td><%= link_to 'Destroy', transaction, method: :delete, data: { confirm: 'Are you sure?' } %></td>

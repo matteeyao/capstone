@@ -70,6 +70,6 @@ class TransactionsController < ApplicationController
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def transaction_params
-    params.require(:transaction).permit(:title, :body, :published)
+    params.require(:transaction).permit(:txn_hash, :summary, :from, :to, :location, :address)
   end
 end

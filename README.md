@@ -21,6 +21,12 @@ POSTGRES_DB=rails_ledger_dev
 
 ### Starting the application
 
+Ensure `tmp/db` is cleared out by running:
+
+```zsh
+rm -rf tmp/db
+```
+
 ```
 $ docker-compose build
 $ docker-compose up

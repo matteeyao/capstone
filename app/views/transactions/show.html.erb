@@ -1,18 +1,33 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Title:</strong>
-  <%= @transaction.title %>
+  <strong>Address:</strong>
+  <%= @transaction.address %>
 </p>
 
 <p>
-  <strong>Body:</strong>
-  <%= @transaction.body %>
+  <strong>Transaction Hash:</strong>
+  <%= @transaction.txn_hash %>
 </p>
 
 <p>
-  <strong>Published:</strong>
-  <%= @transaction.published %>
+  <strong>Summary:</strong>
+  <%= @transaction.summary %>
+</p>
+
+<p>
+  <strong>From:</strong>
+  <%= @transaction.from %>
+</p>
+
+<p>
+  <strong>To:</strong>
+  <%= @transaction.to %>
+</p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @transaction.location %>
 </p>
 
 <%= link_to 'Edit', edit_transaction_path(@transaction) %> |
