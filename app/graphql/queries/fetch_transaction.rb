@@ -19,7 +19,7 @@ module Queries
   end
 end
 
-=begin
+<<-DOC
 
 QUERIES:
 
@@ -57,4 +57,4 @@ QUERY VARIABLES:
   "txnHash": "0x567be1fac6fa34aa0cb273fc2afb6e584bb75b0444784629f252c45ee164f421"
 }
 
-=end
+DOC

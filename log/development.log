@@ -17036,3 +17036,881 @@ Processing by GraphqlController#execute as */*
 Completed 200 OK in 177ms (Views: 0.2ms | ActiveRecord: 3.1ms | Allocations: 9613)
 
 
+Started GET "/graphiql" for 192.168.32.1 at 2022-03-25 01:56:22 +0000
+Cannot render console from 192.168.32.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by GraphiQL::Rails::EditorsController#show as HTML
+  Parameters: {"graphql_path"=>"/graphql"}
+  Rendering /usr/local/bundle/gems/graphiql-rails-1.8.0/app/views/graphiql/rails/editors/show.html.erb
+  Rendered /usr/local/bundle/gems/graphiql-rails-1.8.0/app/views/graphiql/rails/editors/show.html.erb (Duration: 70.6ms | Allocations: 8810)
+Completed 200 OK in 116ms (Views: 72.7ms | ActiveRecord: 0.0ms | Allocations: 11317)
+
+
+Started POST "/graphql" for 192.168.32.1 at 2022-03-25 01:56:23 +0000
+Cannot render console from 192.168.32.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by GraphqlController#execute as */*
+  Parameters: {"query"=>"\n    query IntrospectionQuery {\n      __schema {\n        \n        queryType { name }\n        mutationType { name }\n        subscriptionType { name }\n        types {\n          ...FullType\n        }\n        directives {\n          name\n          description\n          \n          locations\n          args {\n            ...InputValue\n          }\n        }\n      }\n    }\n\n    fragment FullType on __Type {\n      kind\n      name\n      description\n      \n      fields(includeDeprecated: true) {\n        name\n        description\n        args {\n          ...InputValue\n        }\n        type {\n          ...TypeRef\n        }\n        isDeprecated\n        deprecationReason\n      }\n      inputFields {\n        ...InputValue\n      }\n      interfaces {\n        ...TypeRef\n      }\n      enumValues(includeDeprecated: true) {\n        name\n        description\n        isDeprecated\n        deprecationReason\n      }\n      possibleTypes {\n        ...TypeRef\n      }\n    }\n\n    fragment InputValue on __InputValue {\n      name\n      description\n      type { ...TypeRef }\n      defaultValue\n    }\n\n    fragment TypeRef on __Type {\n      kind\n      name\n      ofType {\n        kind\n        name\n        ofType {\n          kind\n          name\n          ofType {\n            kind\n            name\n            ofType {\n              kind\n              name\n              ofType {\n                kind\n                name\n                ofType {\n                  kind\n                  name\n                  ofType {\n                    kind\n                    name\n                  }\n                }\n              }\n            }\n          }\n        }\n      }\n    }\n  ", "operationName"=>"IntrospectionQuery", "graphql"=>{"query"=>"\n    query IntrospectionQuery {\n      __schema {\n        \n        queryType { name }\n        mutationType { name }\n        subscriptionType { name }\n        types {\n          ...FullType\n        }\n        directives {\n          name\n          description\n          \n          locations\n          args {\n            ...InputValue\n          }\n        }\n      }\n    }\n\n    fragment FullType on __Type {\n      kind\n      name\n      description\n      \n      fields(includeDeprecated: true) {\n        name\n        description\n        args {\n          ...InputValue\n        }\n        type {\n          ...TypeRef\n        }\n        isDeprecated\n        deprecationReason\n      }\n      inputFields {\n        ...InputValue\n      }\n      interfaces {\n        ...TypeRef\n      }\n      enumValues(includeDeprecated: true) {\n        name\n        description\n        isDeprecated\n        deprecationReason\n      }\n      possibleTypes {\n        ...TypeRef\n      }\n    }\n\n    fragment InputValue on __InputValue {\n      name\n      description\n      type { ...TypeRef }\n      defaultValue\n    }\n\n    fragment TypeRef on __Type {\n      kind\n      name\n      ofType {\n        kind\n        name\n        ofType {\n          kind\n          name\n          ofType {\n            kind\n            name\n            ofType {\n              kind\n              name\n              ofType {\n                kind\n                name\n                ofType {\n                  kind\n                  name\n                  ofType {\n                    kind\n                    name\n                  }\n                }\n              }\n            }\n          }\n        }\n      }\n    }\n  ", "operationName"=>"IntrospectionQuery"}}
+uninitialized constant Types::Input
+/myapp/app/graphql/mutations/add_transaction.rb:3:in `<class:AddTransaction>'
+/myapp/app/graphql/mutations/add_transaction.rb:2:in `<module:Mutations>'
+/myapp/app/graphql/mutations/add_transaction.rb:1:in `<top (required)>'
+/usr/local/bundle/gems/activesupport-6.0.4.7/lib/active_support/dependencies/interlock.rb:14:in `block in loading'
+/usr/local/bundle/gems/activesupport-6.0.4.7/lib/active_support/concurrency/share_lock.rb:151:in `exclusive'
+/usr/local/bundle/gems/activesupport-6.0.4.7/lib/active_support/dependencies/interlock.rb:13:in `loading'
+/myapp/app/graphql/types/mutation_type.rb:3:in `<class:MutationType>'
+/myapp/app/graphql/types/mutation_type.rb:2:in `<module:Types>'
+/myapp/app/graphql/types/mutation_type.rb:1:in `<top (required)>'
+/usr/local/bundle/gems/activesupport-6.0.4.7/lib/active_support/dependencies/interlock.rb:14:in `block in loading'
+/usr/local/bundle/gems/activesupport-6.0.4.7/lib/active_support/concurrency/share_lock.rb:151:in `exclusive'
+/usr/local/bundle/gems/activesupport-6.0.4.7/lib/active_support/dependencies/interlock.rb:13:in `loading'
+/myapp/app/graphql/ledger_schema.rb:2:in `<class:LedgerSchema>'
+/myapp/app/graphql/ledger_schema.rb:1:in `<top (required)>'
+/usr/local/bundle/gems/activesupport-6.0.4.7/lib/active_support/dependencies/interlock.rb:14:in `block in loading'
+/usr/local/bundle/gems/activesupport-6.0.4.7/lib/active_support/concurrency/share_lock.rb:151:in `exclusive'
+/usr/local/bundle/gems/activesupport-6.0.4.7/lib/active_support/dependencies/interlock.rb:13:in `loading'
+/myapp/app/controllers/graphql_controller.rb:15:in `execute'
+/usr/local/bundle/gems/actionpack-6.0.4.7/lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+/usr/local/bundle/gems/actionpack-6.0.4.7/lib/abstract_controller/base.rb:195:in `process_action'
+/usr/local/bundle/gems/actionpack-6.0.4.7/lib/action_controller/metal/rendering.rb:30:in `process_action'
+/usr/local/bundle/gems/actionpack-6.0.4.7/lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+/usr/local/bundle/gems/activesupport-6.0.4.7/lib/active_support/callbacks.rb:135:in `run_callbacks'
+/usr/local/bundle/gems/actionpack-6.0.4.7/lib/abstract_controller/callbacks.rb:41:in `process_action'
+/usr/local/bundle/gems/actionpack-6.0.4.7/lib/action_controller/metal/rescue.rb:22:in `process_action'
+/usr/local/bundle/gems/actionpack-6.0.4.7/lib/action_controller/metal/instrumentation.rb:33:in `block in process_action'
+/usr/local/bundle/gems/activesupport-6.0.4.7/lib/active_support/notifications.rb:180:in `block in instrument'
+/usr/local/bundle/gems/activesupport-6.0.4.7/lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+/usr/local/bundle/gems/activesupport-6.0.4.7/lib/active_support/notifications.rb:180:in `instrument'
+/usr/local/bundle/gems/actionpack-6.0.4.7/lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+/usr/local/bundle/gems/actionpack-6.0.4.7/lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+/usr/local/bundle/gems/activerecord-6.0.4.7/lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+/usr/local/bundle/gems/actionpack-6.0.4.7/lib/abstract_controller/base.rb:136:in `process'
+/usr/local/bundle/gems/actionview-6.0.4.7/lib/action_view/rendering.rb:39:in `process'
+/usr/local/bundle/gems/actionpack-6.0.4.7/lib/action_controller/metal.rb:190:in `dispatch'
+/usr/local/bundle/gems/actionpack-6.0.4.7/lib/action_controller/metal.rb:254:in `dispatch'
+/usr/local/bundle/gems/actionpack-6.0.4.7/lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+/usr/local/bundle/gems/actionpack-6.0.4.7/lib/action_dispatch/routing/route_set.rb:33:in `serve'
+/usr/local/bundle/gems/actionpack-6.0.4.7/lib/action_dispatch/journey/router.rb:49:in `block in serve'
+/usr/local/bundle/gems/actionpack-6.0.4.7/lib/action_dispatch/journey/router.rb:32:in `each'
+/usr/local/bundle/gems/actionpack-6.0.4.7/lib/action_dispatch/journey/router.rb:32:in `serve'
+/usr/local/bundle/gems/actionpack-6.0.4.7/lib/action_dispatch/routing/route_set.rb:834:in `call'
+/usr/local/bundle/gems/rack-2.2.3/lib/rack/tempfile_reaper.rb:15:in `call'
+/usr/local/bundle/gems/rack-2.2.3/lib/rack/etag.rb:27:in `call'
+/usr/local/bundle/gems/rack-2.2.3/lib/rack/conditional_get.rb:40:in `call'
+/usr/local/bundle/gems/rack-2.2.3/lib/rack/head.rb:12:in `call'
+/usr/local/bundle/gems/actionpack-6.0.4.7/lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+/usr/local/bundle/gems/rack-2.2.3/lib/rack/session/abstract/id.rb:266:in `context'
+/usr/local/bundle/gems/rack-2.2.3/lib/rack/session/abstract/id.rb:260:in `call'
+/usr/local/bundle/gems/actionpack-6.0.4.7/lib/action_dispatch/middleware/cookies.rb:654:in `call'
+/usr/local/bundle/gems/activerecord-6.0.4.7/lib/active_record/migration.rb:567:in `call'
+/usr/local/bundle/gems/actionpack-6.0.4.7/lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+/usr/local/bundle/gems/activesupport-6.0.4.7/lib/active_support/callbacks.rb:101:in `run_callbacks'
+/usr/local/bundle/gems/actionpack-6.0.4.7/lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+/usr/local/bundle/gems/actionpack-6.0.4.7/lib/action_dispatch/middleware/executor.rb:14:in `call'
+/usr/local/bundle/gems/actionpack-6.0.4.7/lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+/usr/local/bundle/gems/actionpack-6.0.4.7/lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+/usr/local/bundle/gems/web-console-4.2.0/lib/web_console/middleware.rb:132:in `call_app'
+/usr/local/bundle/gems/web-console-4.2.0/lib/web_console/middleware.rb:19:in `block in call'
+/usr/local/bundle/gems/web-console-4.2.0/lib/web_console/middleware.rb:17:in `catch'
+/usr/local/bundle/gems/web-console-4.2.0/lib/web_console/middleware.rb:17:in `call'
+/usr/local/bundle/gems/actionpack-6.0.4.7/lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+/usr/local/bundle/gems/railties-6.0.4.7/lib/rails/rack/logger.rb:37:in `call_app'
+/usr/local/bundle/gems/railties-6.0.4.7/lib/rails/rack/logger.rb:26:in `block in call'
+/usr/local/bundle/gems/activesupport-6.0.4.7/lib/active_support/tagged_logging.rb:80:in `block in tagged'
+/usr/local/bundle/gems/activesupport-6.0.4.7/lib/active_support/tagged_logging.rb:28:in `tagged'
+/usr/local/bundle/gems/activesupport-6.0.4.7/lib/active_support/tagged_logging.rb:80:in `tagged'
+/usr/local/bundle/gems/railties-6.0.4.7/lib/rails/rack/logger.rb:26:in `call'
+/usr/local/bundle/gems/sprockets-rails-3.4.2/lib/sprockets/rails/quiet_assets.rb:13:in `call'
+/usr/local/bundle/gems/actionpack-6.0.4.7/lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+/usr/local/bundle/gems/actionpack-6.0.4.7/lib/action_dispatch/middleware/request_id.rb:27:in `call'
+/usr/local/bundle/gems/rack-2.2.3/lib/rack/method_override.rb:24:in `call'
+/usr/local/bundle/gems/rack-2.2.3/lib/rack/runtime.rb:22:in `call'
+/usr/local/bundle/gems/activesupport-6.0.4.7/lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+/usr/local/bundle/gems/actionpack-6.0.4.7/lib/action_dispatch/middleware/executor.rb:14:in `call'
+/usr/local/bundle/gems/actionpack-6.0.4.7/lib/action_dispatch/middleware/static.rb:126:in `call'
+/usr/local/bundle/gems/rack-2.2.3/lib/rack/sendfile.rb:110:in `call'
+/usr/local/bundle/gems/actionpack-6.0.4.7/lib/action_dispatch/middleware/host_authorization.rb:103:in `call'
+/usr/local/bundle/gems/railties-6.0.4.7/lib/rails/engine.rb:527:in `call'
+/usr/local/bundle/gems/puma-3.12.6/lib/puma/configuration.rb:227:in `call'
+/usr/local/bundle/gems/puma-3.12.6/lib/puma/server.rb:706:in `handle_request'
+/usr/local/bundle/gems/puma-3.12.6/lib/puma/server.rb:476:in `process_client'
+/usr/local/bundle/gems/puma-3.12.6/lib/puma/server.rb:334:in `block in run'
+/usr/local/bundle/gems/puma-3.12.6/lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Completed 500 Internal Server Error in 187ms (Views: 0.7ms | ActiveRecord: 0.0ms | Allocations: 5795)
+
+
+Started GET "/graphiql" for 192.168.32.1 at 2022-03-25 01:56:51 +0000
+Cannot render console from 192.168.32.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by GraphiQL::Rails::EditorsController#show as HTML
+  Parameters: {"graphql_path"=>"/graphql"}
+  Rendering /usr/local/bundle/gems/graphiql-rails-1.8.0/app/views/graphiql/rails/editors/show.html.erb
+  Rendered /usr/local/bundle/gems/graphiql-rails-1.8.0/app/views/graphiql/rails/editors/show.html.erb (Duration: 49.3ms | Allocations: 8776)
+Completed 200 OK in 99ms (Views: 51.9ms | ActiveRecord: 0.0ms | Allocations: 11278)
+
+
+Started POST "/graphql" for 192.168.32.1 at 2022-03-25 01:56:52 +0000
+Cannot render console from 192.168.32.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by GraphqlController#execute as */*
+  Parameters: {"query"=>"\n    query IntrospectionQuery {\n      __schema {\n        \n        queryType { name }\n        mutationType { name }\n        subscriptionType { name }\n        types {\n          ...FullType\n        }\n        directives {\n          name\n          description\n          \n          locations\n          args {\n            ...InputValue\n          }\n        }\n      }\n    }\n\n    fragment FullType on __Type {\n      kind\n      name\n      description\n      \n      fields(includeDeprecated: true) {\n        name\n        description\n        args {\n          ...InputValue\n        }\n        type {\n          ...TypeRef\n        }\n        isDeprecated\n        deprecationReason\n      }\n      inputFields {\n        ...InputValue\n      }\n      interfaces {\n        ...TypeRef\n      }\n      enumValues(includeDeprecated: true) {\n        name\n        description\n        isDeprecated\n        deprecationReason\n      }\n      possibleTypes {\n        ...TypeRef\n      }\n    }\n\n    fragment InputValue on __InputValue {\n      name\n      description\n      type { ...TypeRef }\n      defaultValue\n    }\n\n    fragment TypeRef on __Type {\n      kind\n      name\n      ofType {\n        kind\n        name\n        ofType {\n          kind\n          name\n          ofType {\n            kind\n            name\n            ofType {\n              kind\n              name\n              ofType {\n                kind\n                name\n                ofType {\n                  kind\n                  name\n                  ofType {\n                    kind\n                    name\n                  }\n                }\n              }\n            }\n          }\n        }\n      }\n    }\n  ", "operationName"=>"IntrospectionQuery", "graphql"=>{"query"=>"\n    query IntrospectionQuery {\n      __schema {\n        \n        queryType { name }\n        mutationType { name }\n        subscriptionType { name }\n        types {\n          ...FullType\n        }\n        directives {\n          name\n          description\n          \n          locations\n          args {\n            ...InputValue\n          }\n        }\n      }\n    }\n\n    fragment FullType on __Type {\n      kind\n      name\n      description\n      \n      fields(includeDeprecated: true) {\n        name\n        description\n        args {\n          ...InputValue\n        }\n        type {\n          ...TypeRef\n        }\n        isDeprecated\n        deprecationReason\n      }\n      inputFields {\n        ...InputValue\n      }\n      interfaces {\n        ...TypeRef\n      }\n      enumValues(includeDeprecated: true) {\n        name\n        description\n        isDeprecated\n        deprecationReason\n      }\n      possibleTypes {\n        ...TypeRef\n      }\n    }\n\n    fragment InputValue on __InputValue {\n      name\n      description\n      type { ...TypeRef }\n      defaultValue\n    }\n\n    fragment TypeRef on __Type {\n      kind\n      name\n      ofType {\n        kind\n        name\n        ofType {\n          kind\n          name\n          ofType {\n            kind\n            name\n            ofType {\n              kind\n              name\n              ofType {\n                kind\n                name\n                ofType {\n                  kind\n                  name\n                  ofType {\n                    kind\n                    name\n                  }\n                }\n              }\n            }\n          }\n        }\n      }\n    }\n  ", "operationName"=>"IntrospectionQuery"}}
+uninitialized constant Types::Input
+/myapp/app/graphql/mutations/add_transaction.rb:3:in `<class:AddTransaction>'
+/myapp/app/graphql/mutations/add_transaction.rb:2:in `<module:Mutations>'
+/myapp/app/graphql/mutations/add_transaction.rb:1:in `<top (required)>'
+/usr/local/bundle/gems/activesupport-6.0.4.7/lib/active_support/dependencies/interlock.rb:14:in `block in loading'
+/usr/local/bundle/gems/activesupport-6.0.4.7/lib/active_support/concurrency/share_lock.rb:151:in `exclusive'
+/usr/local/bundle/gems/activesupport-6.0.4.7/lib/active_support/dependencies/interlock.rb:13:in `loading'
+/myapp/app/graphql/types/mutation_type.rb:3:in `<class:MutationType>'
+/myapp/app/graphql/types/mutation_type.rb:2:in `<module:Types>'
+/myapp/app/graphql/types/mutation_type.rb:1:in `<top (required)>'
+/usr/local/bundle/gems/activesupport-6.0.4.7/lib/active_support/dependencies/interlock.rb:14:in `block in loading'
+/usr/local/bundle/gems/activesupport-6.0.4.7/lib/active_support/concurrency/share_lock.rb:151:in `exclusive'
+/usr/local/bundle/gems/activesupport-6.0.4.7/lib/active_support/dependencies/interlock.rb:13:in `loading'
+/myapp/app/graphql/ledger_schema.rb:2:in `<class:LedgerSchema>'
+/myapp/app/graphql/ledger_schema.rb:1:in `<top (required)>'
+/usr/local/bundle/gems/activesupport-6.0.4.7/lib/active_support/dependencies/interlock.rb:14:in `block in loading'
+/usr/local/bundle/gems/activesupport-6.0.4.7/lib/active_support/concurrency/share_lock.rb:151:in `exclusive'
+/usr/local/bundle/gems/activesupport-6.0.4.7/lib/active_support/dependencies/interlock.rb:13:in `loading'
+/myapp/app/controllers/graphql_controller.rb:15:in `execute'
+/usr/local/bundle/gems/actionpack-6.0.4.7/lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+/usr/local/bundle/gems/actionpack-6.0.4.7/lib/abstract_controller/base.rb:195:in `process_action'
+/usr/local/bundle/gems/actionpack-6.0.4.7/lib/action_controller/metal/rendering.rb:30:in `process_action'
+/usr/local/bundle/gems/actionpack-6.0.4.7/lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+/usr/local/bundle/gems/activesupport-6.0.4.7/lib/active_support/callbacks.rb:135:in `run_callbacks'
+/usr/local/bundle/gems/actionpack-6.0.4.7/lib/abstract_controller/callbacks.rb:41:in `process_action'
+/usr/local/bundle/gems/actionpack-6.0.4.7/lib/action_controller/metal/rescue.rb:22:in `process_action'
+/usr/local/bundle/gems/actionpack-6.0.4.7/lib/action_controller/metal/instrumentation.rb:33:in `block in process_action'
+/usr/local/bundle/gems/activesupport-6.0.4.7/lib/active_support/notifications.rb:180:in `block in instrument'
+/usr/local/bundle/gems/activesupport-6.0.4.7/lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+/usr/local/bundle/gems/activesupport-6.0.4.7/lib/active_support/notifications.rb:180:in `instrument'
+/usr/local/bundle/gems/actionpack-6.0.4.7/lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+/usr/local/bundle/gems/actionpack-6.0.4.7/lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+/usr/local/bundle/gems/activerecord-6.0.4.7/lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+/usr/local/bundle/gems/actionpack-6.0.4.7/lib/abstract_controller/base.rb:136:in `process'
+/usr/local/bundle/gems/actionview-6.0.4.7/lib/action_view/rendering.rb:39:in `process'
+/usr/local/bundle/gems/actionpack-6.0.4.7/lib/action_controller/metal.rb:190:in `dispatch'
+/usr/local/bundle/gems/actionpack-6.0.4.7/lib/action_controller/metal.rb:254:in `dispatch'
+/usr/local/bundle/gems/actionpack-6.0.4.7/lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+/usr/local/bundle/gems/actionpack-6.0.4.7/lib/action_dispatch/routing/route_set.rb:33:in `serve'
+/usr/local/bundle/gems/actionpack-6.0.4.7/lib/action_dispatch/journey/router.rb:49:in `block in serve'
+/usr/local/bundle/gems/actionpack-6.0.4.7/lib/action_dispatch/journey/router.rb:32:in `each'
+/usr/local/bundle/gems/actionpack-6.0.4.7/lib/action_dispatch/journey/router.rb:32:in `serve'
+/usr/local/bundle/gems/actionpack-6.0.4.7/lib/action_dispatch/routing/route_set.rb:834:in `call'
+/usr/local/bundle/gems/rack-2.2.3/lib/rack/tempfile_reaper.rb:15:in `call'
+/usr/local/bundle/gems/rack-2.2.3/lib/rack/etag.rb:27:in `call'
+/usr/local/bundle/gems/rack-2.2.3/lib/rack/conditional_get.rb:40:in `call'
+/usr/local/bundle/gems/rack-2.2.3/lib/rack/head.rb:12:in `call'
+/usr/local/bundle/gems/actionpack-6.0.4.7/lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+/usr/local/bundle/gems/rack-2.2.3/lib/rack/session/abstract/id.rb:266:in `context'
+/usr/local/bundle/gems/rack-2.2.3/lib/rack/session/abstract/id.rb:260:in `call'
+/usr/local/bundle/gems/actionpack-6.0.4.7/lib/action_dispatch/middleware/cookies.rb:654:in `call'
+/usr/local/bundle/gems/activerecord-6.0.4.7/lib/active_record/migration.rb:567:in `call'
+/usr/local/bundle/gems/actionpack-6.0.4.7/lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+/usr/local/bundle/gems/activesupport-6.0.4.7/lib/active_support/callbacks.rb:101:in `run_callbacks'
+/usr/local/bundle/gems/actionpack-6.0.4.7/lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+/usr/local/bundle/gems/actionpack-6.0.4.7/lib/action_dispatch/middleware/executor.rb:14:in `call'
+/usr/local/bundle/gems/actionpack-6.0.4.7/lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+/usr/local/bundle/gems/actionpack-6.0.4.7/lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+/usr/local/bundle/gems/web-console-4.2.0/lib/web_console/middleware.rb:132:in `call_app'
+/usr/local/bundle/gems/web-console-4.2.0/lib/web_console/middleware.rb:19:in `block in call'
+/usr/local/bundle/gems/web-console-4.2.0/lib/web_console/middleware.rb:17:in `catch'
+/usr/local/bundle/gems/web-console-4.2.0/lib/web_console/middleware.rb:17:in `call'
+/usr/local/bundle/gems/actionpack-6.0.4.7/lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+/usr/local/bundle/gems/railties-6.0.4.7/lib/rails/rack/logger.rb:37:in `call_app'
+/usr/local/bundle/gems/railties-6.0.4.7/lib/rails/rack/logger.rb:26:in `block in call'
+/usr/local/bundle/gems/activesupport-6.0.4.7/lib/active_support/tagged_logging.rb:80:in `block in tagged'
+/usr/local/bundle/gems/activesupport-6.0.4.7/lib/active_support/tagged_logging.rb:28:in `tagged'
+/usr/local/bundle/gems/activesupport-6.0.4.7/lib/active_support/tagged_logging.rb:80:in `tagged'
+/usr/local/bundle/gems/railties-6.0.4.7/lib/rails/rack/logger.rb:26:in `call'
+/usr/local/bundle/gems/sprockets-rails-3.4.2/lib/sprockets/rails/quiet_assets.rb:13:in `call'
+/usr/local/bundle/gems/actionpack-6.0.4.7/lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+/usr/local/bundle/gems/actionpack-6.0.4.7/lib/action_dispatch/middleware/request_id.rb:27:in `call'
+/usr/local/bundle/gems/rack-2.2.3/lib/rack/method_override.rb:24:in `call'
+/usr/local/bundle/gems/rack-2.2.3/lib/rack/runtime.rb:22:in `call'
+/usr/local/bundle/gems/activesupport-6.0.4.7/lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+/usr/local/bundle/gems/actionpack-6.0.4.7/lib/action_dispatch/middleware/executor.rb:14:in `call'
+/usr/local/bundle/gems/actionpack-6.0.4.7/lib/action_dispatch/middleware/static.rb:126:in `call'
+/usr/local/bundle/gems/rack-2.2.3/lib/rack/sendfile.rb:110:in `call'
+/usr/local/bundle/gems/actionpack-6.0.4.7/lib/action_dispatch/middleware/host_authorization.rb:103:in `call'
+/usr/local/bundle/gems/railties-6.0.4.7/lib/rails/engine.rb:527:in `call'
+/usr/local/bundle/gems/puma-3.12.6/lib/puma/configuration.rb:227:in `call'
+/usr/local/bundle/gems/puma-3.12.6/lib/puma/server.rb:706:in `handle_request'
+/usr/local/bundle/gems/puma-3.12.6/lib/puma/server.rb:476:in `process_client'
+/usr/local/bundle/gems/puma-3.12.6/lib/puma/server.rb:334:in `block in run'
+/usr/local/bundle/gems/puma-3.12.6/lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Completed 500 Internal Server Error in 192ms (Views: 0.7ms | ActiveRecord: 0.0ms | Allocations: 5750)
+
+
+Started GET "/graphiql" for 192.168.32.1 at 2022-03-25 02:01:14 +0000
+Cannot render console from 192.168.32.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by GraphiQL::Rails::EditorsController#show as HTML
+  Parameters: {"graphql_path"=>"/graphql"}
+  Rendering /usr/local/bundle/gems/graphiql-rails-1.8.0/app/views/graphiql/rails/editors/show.html.erb
+  Rendered /usr/local/bundle/gems/graphiql-rails-1.8.0/app/views/graphiql/rails/editors/show.html.erb (Duration: 54.4ms | Allocations: 8776)
+Completed 200 OK in 108ms (Views: 56.7ms | ActiveRecord: 0.0ms | Allocations: 11282)
+
+
+Started POST "/graphql" for 192.168.32.1 at 2022-03-25 02:01:14 +0000
+Cannot render console from 192.168.32.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by GraphqlController#execute as */*
+  Parameters: {"query"=>"\n    query IntrospectionQuery {\n      __schema {\n        \n        queryType { name }\n        mutationType { name }\n        subscriptionType { name }\n        types {\n          ...FullType\n        }\n        directives {\n          name\n          description\n          \n          locations\n          args {\n            ...InputValue\n          }\n        }\n      }\n    }\n\n    fragment FullType on __Type {\n      kind\n      name\n      description\n      \n      fields(includeDeprecated: true) {\n        name\n        description\n        args {\n          ...InputValue\n        }\n        type {\n          ...TypeRef\n        }\n        isDeprecated\n        deprecationReason\n      }\n      inputFields {\n        ...InputValue\n      }\n      interfaces {\n        ...TypeRef\n      }\n      enumValues(includeDeprecated: true) {\n        name\n        description\n        isDeprecated\n        deprecationReason\n      }\n      possibleTypes {\n        ...TypeRef\n      }\n    }\n\n    fragment InputValue on __InputValue {\n      name\n      description\n      type { ...TypeRef }\n      defaultValue\n    }\n\n    fragment TypeRef on __Type {\n      kind\n      name\n      ofType {\n        kind\n        name\n        ofType {\n          kind\n          name\n          ofType {\n            kind\n            name\n            ofType {\n              kind\n              name\n              ofType {\n                kind\n                name\n                ofType {\n                  kind\n                  name\n                  ofType {\n                    kind\n                    name\n                  }\n                }\n              }\n            }\n          }\n        }\n      }\n    }\n  ", "operationName"=>"IntrospectionQuery", "graphql"=>{"query"=>"\n    query IntrospectionQuery {\n      __schema {\n        \n        queryType { name }\n        mutationType { name }\n        subscriptionType { name }\n        types {\n          ...FullType\n        }\n        directives {\n          name\n          description\n          \n          locations\n          args {\n            ...InputValue\n          }\n        }\n      }\n    }\n\n    fragment FullType on __Type {\n      kind\n      name\n      description\n      \n      fields(includeDeprecated: true) {\n        name\n        description\n        args {\n          ...InputValue\n        }\n        type {\n          ...TypeRef\n        }\n        isDeprecated\n        deprecationReason\n      }\n      inputFields {\n        ...InputValue\n      }\n      interfaces {\n        ...TypeRef\n      }\n      enumValues(includeDeprecated: true) {\n        name\n        description\n        isDeprecated\n        deprecationReason\n      }\n      possibleTypes {\n        ...TypeRef\n      }\n    }\n\n    fragment InputValue on __InputValue {\n      name\n      description\n      type { ...TypeRef }\n      defaultValue\n    }\n\n    fragment TypeRef on __Type {\n      kind\n      name\n      ofType {\n        kind\n        name\n        ofType {\n          kind\n          name\n          ofType {\n            kind\n            name\n            ofType {\n              kind\n              name\n              ofType {\n                kind\n                name\n                ofType {\n                  kind\n                  name\n                  ofType {\n                    kind\n                    name\n                  }\n                }\n              }\n            }\n          }\n        }\n      }\n    }\n  ", "operationName"=>"IntrospectionQuery"}}
+uninitialized constant Types::Input
+/myapp/app/graphql/mutations/add_transaction.rb:3:in `<class:AddTransaction>'
+/myapp/app/graphql/mutations/add_transaction.rb:2:in `<module:Mutations>'
+/myapp/app/graphql/mutations/add_transaction.rb:1:in `<top (required)>'
+/usr/local/bundle/gems/activesupport-6.0.4.7/lib/active_support/dependencies/interlock.rb:14:in `block in loading'
+/usr/local/bundle/gems/activesupport-6.0.4.7/lib/active_support/concurrency/share_lock.rb:151:in `exclusive'
+/usr/local/bundle/gems/activesupport-6.0.4.7/lib/active_support/dependencies/interlock.rb:13:in `loading'
+/myapp/app/graphql/types/mutation_type.rb:3:in `<class:MutationType>'
+/myapp/app/graphql/types/mutation_type.rb:2:in `<module:Types>'
+/myapp/app/graphql/types/mutation_type.rb:1:in `<top (required)>'
+/usr/local/bundle/gems/activesupport-6.0.4.7/lib/active_support/dependencies/interlock.rb:14:in `block in loading'
+/usr/local/bundle/gems/activesupport-6.0.4.7/lib/active_support/concurrency/share_lock.rb:151:in `exclusive'
+/usr/local/bundle/gems/activesupport-6.0.4.7/lib/active_support/dependencies/interlock.rb:13:in `loading'
+/myapp/app/graphql/ledger_schema.rb:2:in `<class:LedgerSchema>'
+/myapp/app/graphql/ledger_schema.rb:1:in `<top (required)>'
+/usr/local/bundle/gems/activesupport-6.0.4.7/lib/active_support/dependencies/interlock.rb:14:in `block in loading'
+/usr/local/bundle/gems/activesupport-6.0.4.7/lib/active_support/concurrency/share_lock.rb:151:in `exclusive'
+/usr/local/bundle/gems/activesupport-6.0.4.7/lib/active_support/dependencies/interlock.rb:13:in `loading'
+/myapp/app/controllers/graphql_controller.rb:15:in `execute'
+/usr/local/bundle/gems/actionpack-6.0.4.7/lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+/usr/local/bundle/gems/actionpack-6.0.4.7/lib/abstract_controller/base.rb:195:in `process_action'
+/usr/local/bundle/gems/actionpack-6.0.4.7/lib/action_controller/metal/rendering.rb:30:in `process_action'
+/usr/local/bundle/gems/actionpack-6.0.4.7/lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+/usr/local/bundle/gems/activesupport-6.0.4.7/lib/active_support/callbacks.rb:135:in `run_callbacks'
+/usr/local/bundle/gems/actionpack-6.0.4.7/lib/abstract_controller/callbacks.rb:41:in `process_action'
+/usr/local/bundle/gems/actionpack-6.0.4.7/lib/action_controller/metal/rescue.rb:22:in `process_action'
+/usr/local/bundle/gems/actionpack-6.0.4.7/lib/action_controller/metal/instrumentation.rb:33:in `block in process_action'
+/usr/local/bundle/gems/activesupport-6.0.4.7/lib/active_support/notifications.rb:180:in `block in instrument'
+/usr/local/bundle/gems/activesupport-6.0.4.7/lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+/usr/local/bundle/gems/activesupport-6.0.4.7/lib/active_support/notifications.rb:180:in `instrument'
+/usr/local/bundle/gems/actionpack-6.0.4.7/lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+/usr/local/bundle/gems/actionpack-6.0.4.7/lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+/usr/local/bundle/gems/activerecord-6.0.4.7/lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+/usr/local/bundle/gems/actionpack-6.0.4.7/lib/abstract_controller/base.rb:136:in `process'
+/usr/local/bundle/gems/actionview-6.0.4.7/lib/action_view/rendering.rb:39:in `process'
+/usr/local/bundle/gems/actionpack-6.0.4.7/lib/action_controller/metal.rb:190:in `dispatch'
+/usr/local/bundle/gems/actionpack-6.0.4.7/lib/action_controller/metal.rb:254:in `dispatch'
+/usr/local/bundle/gems/actionpack-6.0.4.7/lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+/usr/local/bundle/gems/actionpack-6.0.4.7/lib/action_dispatch/routing/route_set.rb:33:in `serve'
+/usr/local/bundle/gems/actionpack-6.0.4.7/lib/action_dispatch/journey/router.rb:49:in `block in serve'
+/usr/local/bundle/gems/actionpack-6.0.4.7/lib/action_dispatch/journey/router.rb:32:in `each'
+/usr/local/bundle/gems/actionpack-6.0.4.7/lib/action_dispatch/journey/router.rb:32:in `serve'
+/usr/local/bundle/gems/actionpack-6.0.4.7/lib/action_dispatch/routing/route_set.rb:834:in `call'
+/usr/local/bundle/gems/rack-2.2.3/lib/rack/tempfile_reaper.rb:15:in `call'
+/usr/local/bundle/gems/rack-2.2.3/lib/rack/etag.rb:27:in `call'
+/usr/local/bundle/gems/rack-2.2.3/lib/rack/conditional_get.rb:40:in `call'
+/usr/local/bundle/gems/rack-2.2.3/lib/rack/head.rb:12:in `call'
+/usr/local/bundle/gems/actionpack-6.0.4.7/lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+/usr/local/bundle/gems/rack-2.2.3/lib/rack/session/abstract/id.rb:266:in `context'
+/usr/local/bundle/gems/rack-2.2.3/lib/rack/session/abstract/id.rb:260:in `call'
+/usr/local/bundle/gems/actionpack-6.0.4.7/lib/action_dispatch/middleware/cookies.rb:654:in `call'
+/usr/local/bundle/gems/activerecord-6.0.4.7/lib/active_record/migration.rb:567:in `call'
+/usr/local/bundle/gems/actionpack-6.0.4.7/lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+/usr/local/bundle/gems/activesupport-6.0.4.7/lib/active_support/callbacks.rb:101:in `run_callbacks'
+/usr/local/bundle/gems/actionpack-6.0.4.7/lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+/usr/local/bundle/gems/actionpack-6.0.4.7/lib/action_dispatch/middleware/executor.rb:14:in `call'
+/usr/local/bundle/gems/actionpack-6.0.4.7/lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+/usr/local/bundle/gems/actionpack-6.0.4.7/lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+/usr/local/bundle/gems/web-console-4.2.0/lib/web_console/middleware.rb:132:in `call_app'
+/usr/local/bundle/gems/web-console-4.2.0/lib/web_console/middleware.rb:19:in `block in call'
+/usr/local/bundle/gems/web-console-4.2.0/lib/web_console/middleware.rb:17:in `catch'
+/usr/local/bundle/gems/web-console-4.2.0/lib/web_console/middleware.rb:17:in `call'
+/usr/local/bundle/gems/actionpack-6.0.4.7/lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+/usr/local/bundle/gems/railties-6.0.4.7/lib/rails/rack/logger.rb:37:in `call_app'
+/usr/local/bundle/gems/railties-6.0.4.7/lib/rails/rack/logger.rb:26:in `block in call'
+/usr/local/bundle/gems/activesupport-6.0.4.7/lib/active_support/tagged_logging.rb:80:in `block in tagged'
+/usr/local/bundle/gems/activesupport-6.0.4.7/lib/active_support/tagged_logging.rb:28:in `tagged'
+/usr/local/bundle/gems/activesupport-6.0.4.7/lib/active_support/tagged_logging.rb:80:in `tagged'
+/usr/local/bundle/gems/railties-6.0.4.7/lib/rails/rack/logger.rb:26:in `call'
+/usr/local/bundle/gems/sprockets-rails-3.4.2/lib/sprockets/rails/quiet_assets.rb:13:in `call'
+/usr/local/bundle/gems/actionpack-6.0.4.7/lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+/usr/local/bundle/gems/actionpack-6.0.4.7/lib/action_dispatch/middleware/request_id.rb:27:in `call'
+/usr/local/bundle/gems/rack-2.2.3/lib/rack/method_override.rb:24:in `call'
+/usr/local/bundle/gems/rack-2.2.3/lib/rack/runtime.rb:22:in `call'
+/usr/local/bundle/gems/activesupport-6.0.4.7/lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+/usr/local/bundle/gems/actionpack-6.0.4.7/lib/action_dispatch/middleware/executor.rb:14:in `call'
+/usr/local/bundle/gems/actionpack-6.0.4.7/lib/action_dispatch/middleware/static.rb:126:in `call'
+/usr/local/bundle/gems/rack-2.2.3/lib/rack/sendfile.rb:110:in `call'
+/usr/local/bundle/gems/actionpack-6.0.4.7/lib/action_dispatch/middleware/host_authorization.rb:103:in `call'
+/usr/local/bundle/gems/railties-6.0.4.7/lib/rails/engine.rb:527:in `call'
+/usr/local/bundle/gems/puma-3.12.6/lib/puma/configuration.rb:227:in `call'
+/usr/local/bundle/gems/puma-3.12.6/lib/puma/server.rb:706:in `handle_request'
+/usr/local/bundle/gems/puma-3.12.6/lib/puma/server.rb:476:in `process_client'
+/usr/local/bundle/gems/puma-3.12.6/lib/puma/server.rb:334:in `block in run'
+/usr/local/bundle/gems/puma-3.12.6/lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Completed 500 Internal Server Error in 185ms (Views: 0.7ms | ActiveRecord: 0.0ms | Allocations: 5750)
+
+
+Started GET "/graphiql" for 192.168.32.1 at 2022-03-25 02:01:16 +0000
+Cannot render console from 192.168.32.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by GraphiQL::Rails::EditorsController#show as HTML
+  Parameters: {"graphql_path"=>"/graphql"}
+  Rendering /usr/local/bundle/gems/graphiql-rails-1.8.0/app/views/graphiql/rails/editors/show.html.erb
+  Rendered /usr/local/bundle/gems/graphiql-rails-1.8.0/app/views/graphiql/rails/editors/show.html.erb (Duration: 59.0ms | Allocations: 8773)
+Completed 200 OK in 63ms (Views: 62.0ms | ActiveRecord: 0.0ms | Allocations: 10071)
+
+
+Started POST "/graphql" for 192.168.32.1 at 2022-03-25 02:01:17 +0000
+Cannot render console from 192.168.32.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by GraphqlController#execute as */*
+  Parameters: {"query"=>"\n    query IntrospectionQuery {\n      __schema {\n        \n        queryType { name }\n        mutationType { name }\n        subscriptionType { name }\n        types {\n          ...FullType\n        }\n        directives {\n          name\n          description\n          \n          locations\n          args {\n            ...InputValue\n          }\n        }\n      }\n    }\n\n    fragment FullType on __Type {\n      kind\n      name\n      description\n      \n      fields(includeDeprecated: true) {\n        name\n        description\n        args {\n          ...InputValue\n        }\n        type {\n          ...TypeRef\n        }\n        isDeprecated\n        deprecationReason\n      }\n      inputFields {\n        ...InputValue\n      }\n      interfaces {\n        ...TypeRef\n      }\n      enumValues(includeDeprecated: true) {\n        name\n        description\n        isDeprecated\n        deprecationReason\n      }\n      possibleTypes {\n        ...TypeRef\n      }\n    }\n\n    fragment InputValue on __InputValue {\n      name\n      description\n      type { ...TypeRef }\n      defaultValue\n    }\n\n    fragment TypeRef on __Type {\n      kind\n      name\n      ofType {\n        kind\n        name\n        ofType {\n          kind\n          name\n          ofType {\n            kind\n            name\n            ofType {\n              kind\n              name\n              ofType {\n                kind\n                name\n                ofType {\n                  kind\n                  name\n                  ofType {\n                    kind\n                    name\n                  }\n                }\n              }\n            }\n          }\n        }\n      }\n    }\n  ", "operationName"=>"IntrospectionQuery", "graphql"=>{"query"=>"\n    query IntrospectionQuery {\n      __schema {\n        \n        queryType { name }\n        mutationType { name }\n        subscriptionType { name }\n        types {\n          ...FullType\n        }\n        directives {\n          name\n          description\n          \n          locations\n          args {\n            ...InputValue\n          }\n        }\n      }\n    }\n\n    fragment FullType on __Type {\n      kind\n      name\n      description\n      \n      fields(includeDeprecated: true) {\n        name\n        description\n        args {\n          ...InputValue\n        }\n        type {\n          ...TypeRef\n        }\n        isDeprecated\n        deprecationReason\n      }\n      inputFields {\n        ...InputValue\n      }\n      interfaces {\n        ...TypeRef\n      }\n      enumValues(includeDeprecated: true) {\n        name\n        description\n        isDeprecated\n        deprecationReason\n      }\n      possibleTypes {\n        ...TypeRef\n      }\n    }\n\n    fragment InputValue on __InputValue {\n      name\n      description\n      type { ...TypeRef }\n      defaultValue\n    }\n\n    fragment TypeRef on __Type {\n      kind\n      name\n      ofType {\n        kind\n        name\n        ofType {\n          kind\n          name\n          ofType {\n            kind\n            name\n            ofType {\n              kind\n              name\n              ofType {\n                kind\n                name\n                ofType {\n                  kind\n                  name\n                  ofType {\n                    kind\n                    name\n                  }\n                }\n              }\n            }\n          }\n        }\n      }\n    }\n  ", "operationName"=>"IntrospectionQuery"}}
+Completed 500 Internal Server Error in 107ms (ActiveRecord: 0.0ms | Allocations: 2389)
+
+
+  
+LoadError (Unable to autoload constant Types::BaseObject, expected /myapp/app/graphql/types/base_object.rb to define it):
+  
+app/graphql/types/mutation_type.rb:2:in `<module:Types>'
+app/graphql/types/mutation_type.rb:1:in `<top (required)>'
+app/graphql/ledger_schema.rb:2:in `<class:LedgerSchema>'
+app/graphql/ledger_schema.rb:1:in `<top (required)>'
+app/controllers/graphql_controller.rb:15:in `execute'
+Started GET "/graphiql" for 192.168.32.1 at 2022-03-25 02:01:19 +0000
+Cannot render console from 192.168.32.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by GraphiQL::Rails::EditorsController#show as HTML
+  Parameters: {"graphql_path"=>"/graphql"}
+  Rendering /usr/local/bundle/gems/graphiql-rails-1.8.0/app/views/graphiql/rails/editors/show.html.erb
+  Rendered /usr/local/bundle/gems/graphiql-rails-1.8.0/app/views/graphiql/rails/editors/show.html.erb (Duration: 60.5ms | Allocations: 8804)
+Completed 200 OK in 65ms (Views: 63.6ms | ActiveRecord: 0.0ms | Allocations: 10102)
+
+
+Started POST "/graphql" for 192.168.32.1 at 2022-03-25 02:01:19 +0000
+Cannot render console from 192.168.32.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by GraphqlController#execute as */*
+  Parameters: {"query"=>"\n    query IntrospectionQuery {\n      __schema {\n        \n        queryType { name }\n        mutationType { name }\n        subscriptionType { name }\n        types {\n          ...FullType\n        }\n        directives {\n          name\n          description\n          \n          locations\n          args {\n            ...InputValue\n          }\n        }\n      }\n    }\n\n    fragment FullType on __Type {\n      kind\n      name\n      description\n      \n      fields(includeDeprecated: true) {\n        name\n        description\n        args {\n          ...InputValue\n        }\n        type {\n          ...TypeRef\n        }\n        isDeprecated\n        deprecationReason\n      }\n      inputFields {\n        ...InputValue\n      }\n      interfaces {\n        ...TypeRef\n      }\n      enumValues(includeDeprecated: true) {\n        name\n        description\n        isDeprecated\n        deprecationReason\n      }\n      possibleTypes {\n        ...TypeRef\n      }\n    }\n\n    fragment InputValue on __InputValue {\n      name\n      description\n      type { ...TypeRef }\n      defaultValue\n    }\n\n    fragment TypeRef on __Type {\n      kind\n      name\n      ofType {\n        kind\n        name\n        ofType {\n          kind\n          name\n          ofType {\n            kind\n            name\n            ofType {\n              kind\n              name\n              ofType {\n                kind\n                name\n                ofType {\n                  kind\n                  name\n                  ofType {\n                    kind\n                    name\n                  }\n                }\n              }\n            }\n          }\n        }\n      }\n    }\n  ", "operationName"=>"IntrospectionQuery", "graphql"=>{"query"=>"\n    query IntrospectionQuery {\n      __schema {\n        \n        queryType { name }\n        mutationType { name }\n        subscriptionType { name }\n        types {\n          ...FullType\n        }\n        directives {\n          name\n          description\n          \n          locations\n          args {\n            ...InputValue\n          }\n        }\n      }\n    }\n\n    fragment FullType on __Type {\n      kind\n      name\n      description\n      \n      fields(includeDeprecated: true) {\n        name\n        description\n        args {\n          ...InputValue\n        }\n        type {\n          ...TypeRef\n        }\n        isDeprecated\n        deprecationReason\n      }\n      inputFields {\n        ...InputValue\n      }\n      interfaces {\n        ...TypeRef\n      }\n      enumValues(includeDeprecated: true) {\n        name\n        description\n        isDeprecated\n        deprecationReason\n      }\n      possibleTypes {\n        ...TypeRef\n      }\n    }\n\n    fragment InputValue on __InputValue {\n      name\n      description\n      type { ...TypeRef }\n      defaultValue\n    }\n\n    fragment TypeRef on __Type {\n      kind\n      name\n      ofType {\n        kind\n        name\n        ofType {\n          kind\n          name\n          ofType {\n            kind\n            name\n            ofType {\n              kind\n              name\n              ofType {\n                kind\n                name\n                ofType {\n                  kind\n                  name\n                  ofType {\n                    kind\n                    name\n                  }\n                }\n              }\n            }\n          }\n        }\n      }\n    }\n  ", "operationName"=>"IntrospectionQuery"}}
+Completed 500 Internal Server Error in 96ms (ActiveRecord: 0.0ms | Allocations: 2389)
+
+
+  
+LoadError (Unable to autoload constant Types::BaseObject, expected /myapp/app/graphql/types/base_object.rb to define it):
+  
+app/graphql/types/mutation_type.rb:2:in `<module:Types>'
+app/graphql/types/mutation_type.rb:1:in `<top (required)>'
+app/graphql/ledger_schema.rb:2:in `<class:LedgerSchema>'
+app/graphql/ledger_schema.rb:1:in `<top (required)>'
+app/controllers/graphql_controller.rb:15:in `execute'
+Started GET "/graphiql" for 192.168.32.1 at 2022-03-25 02:02:30 +0000
+Cannot render console from 192.168.32.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (5.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by GraphiQL::Rails::EditorsController#show as HTML
+  Parameters: {"graphql_path"=>"/graphql"}
+  Rendering /usr/local/bundle/gems/graphiql-rails-1.8.0/app/views/graphiql/rails/editors/show.html.erb
+  Rendered /usr/local/bundle/gems/graphiql-rails-1.8.0/app/views/graphiql/rails/editors/show.html.erb (Duration: 600.7ms | Allocations: 286892)
+Completed 200 OK in 660ms (Views: 627.9ms | ActiveRecord: 0.0ms | Allocations: 290164)
+
+
+Started POST "/graphql" for 192.168.32.1 at 2022-03-25 02:02:32 +0000
+Cannot render console from 192.168.32.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by GraphqlController#execute as */*
+  Parameters: {"query"=>"\n    query IntrospectionQuery {\n      __schema {\n        \n        queryType { name }\n        mutationType { name }\n        subscriptionType { name }\n        types {\n          ...FullType\n        }\n        directives {\n          name\n          description\n          \n          locations\n          args {\n            ...InputValue\n          }\n        }\n      }\n    }\n\n    fragment FullType on __Type {\n      kind\n      name\n      description\n      \n      fields(includeDeprecated: true) {\n        name\n        description\n        args {\n          ...InputValue\n        }\n        type {\n          ...TypeRef\n        }\n        isDeprecated\n        deprecationReason\n      }\n      inputFields {\n        ...InputValue\n      }\n      interfaces {\n        ...TypeRef\n      }\n      enumValues(includeDeprecated: true) {\n        name\n        description\n        isDeprecated\n        deprecationReason\n      }\n      possibleTypes {\n        ...TypeRef\n      }\n    }\n\n    fragment InputValue on __InputValue {\n      name\n      description\n      type { ...TypeRef }\n      defaultValue\n    }\n\n    fragment TypeRef on __Type {\n      kind\n      name\n      ofType {\n        kind\n        name\n        ofType {\n          kind\n          name\n          ofType {\n            kind\n            name\n            ofType {\n              kind\n              name\n              ofType {\n                kind\n                name\n                ofType {\n                  kind\n                  name\n                  ofType {\n                    kind\n                    name\n                  }\n                }\n              }\n            }\n          }\n        }\n      }\n    }\n  ", "operationName"=>"IntrospectionQuery", "graphql"=>{"query"=>"\n    query IntrospectionQuery {\n      __schema {\n        \n        queryType { name }\n        mutationType { name }\n        subscriptionType { name }\n        types {\n          ...FullType\n        }\n        directives {\n          name\n          description\n          \n          locations\n          args {\n            ...InputValue\n          }\n        }\n      }\n    }\n\n    fragment FullType on __Type {\n      kind\n      name\n      description\n      \n      fields(includeDeprecated: true) {\n        name\n        description\n        args {\n          ...InputValue\n        }\n        type {\n          ...TypeRef\n        }\n        isDeprecated\n        deprecationReason\n      }\n      inputFields {\n        ...InputValue\n      }\n      interfaces {\n        ...TypeRef\n      }\n      enumValues(includeDeprecated: true) {\n        name\n        description\n        isDeprecated\n        deprecationReason\n      }\n      possibleTypes {\n        ...TypeRef\n      }\n    }\n\n    fragment InputValue on __InputValue {\n      name\n      description\n      type { ...TypeRef }\n      defaultValue\n    }\n\n    fragment TypeRef on __Type {\n      kind\n      name\n      ofType {\n        kind\n        name\n        ofType {\n          kind\n          name\n          ofType {\n            kind\n            name\n            ofType {\n              kind\n              name\n              ofType {\n                kind\n                name\n                ofType {\n                  kind\n                  name\n                  ofType {\n                    kind\n                    name\n                  }\n                }\n              }\n            }\n          }\n        }\n      }\n    }\n  ", "operationName"=>"IntrospectionQuery"}}
+uninitialized constant Types::Input
+/myapp/app/graphql/mutations/add_transaction.rb:3:in `<class:AddTransaction>'
+/myapp/app/graphql/mutations/add_transaction.rb:2:in `<module:Mutations>'
+/myapp/app/graphql/mutations/add_transaction.rb:1:in `<top (required)>'
+/usr/local/bundle/gems/activesupport-6.0.4.7/lib/active_support/dependencies/interlock.rb:14:in `block in loading'
+/usr/local/bundle/gems/activesupport-6.0.4.7/lib/active_support/concurrency/share_lock.rb:151:in `exclusive'
+/usr/local/bundle/gems/activesupport-6.0.4.7/lib/active_support/dependencies/interlock.rb:13:in `loading'
+/myapp/app/graphql/types/mutation_type.rb:3:in `<class:MutationType>'
+/myapp/app/graphql/types/mutation_type.rb:2:in `<module:Types>'
+/myapp/app/graphql/types/mutation_type.rb:1:in `<top (required)>'
+/usr/local/bundle/gems/activesupport-6.0.4.7/lib/active_support/dependencies/interlock.rb:14:in `block in loading'
+/usr/local/bundle/gems/activesupport-6.0.4.7/lib/active_support/concurrency/share_lock.rb:151:in `exclusive'
+/usr/local/bundle/gems/activesupport-6.0.4.7/lib/active_support/dependencies/interlock.rb:13:in `loading'
+/myapp/app/graphql/ledger_schema.rb:2:in `<class:LedgerSchema>'
+/myapp/app/graphql/ledger_schema.rb:1:in `<top (required)>'
+/usr/local/bundle/gems/activesupport-6.0.4.7/lib/active_support/dependencies/interlock.rb:14:in `block in loading'
+/usr/local/bundle/gems/activesupport-6.0.4.7/lib/active_support/concurrency/share_lock.rb:151:in `exclusive'
+/usr/local/bundle/gems/activesupport-6.0.4.7/lib/active_support/dependencies/interlock.rb:13:in `loading'
+/myapp/app/controllers/graphql_controller.rb:15:in `execute'
+/usr/local/bundle/gems/actionpack-6.0.4.7/lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+/usr/local/bundle/gems/actionpack-6.0.4.7/lib/abstract_controller/base.rb:195:in `process_action'
+/usr/local/bundle/gems/actionpack-6.0.4.7/lib/action_controller/metal/rendering.rb:30:in `process_action'
+/usr/local/bundle/gems/actionpack-6.0.4.7/lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+/usr/local/bundle/gems/activesupport-6.0.4.7/lib/active_support/callbacks.rb:135:in `run_callbacks'
+/usr/local/bundle/gems/actionpack-6.0.4.7/lib/abstract_controller/callbacks.rb:41:in `process_action'
+/usr/local/bundle/gems/actionpack-6.0.4.7/lib/action_controller/metal/rescue.rb:22:in `process_action'
+/usr/local/bundle/gems/actionpack-6.0.4.7/lib/action_controller/metal/instrumentation.rb:33:in `block in process_action'
+/usr/local/bundle/gems/activesupport-6.0.4.7/lib/active_support/notifications.rb:180:in `block in instrument'
+/usr/local/bundle/gems/activesupport-6.0.4.7/lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+/usr/local/bundle/gems/activesupport-6.0.4.7/lib/active_support/notifications.rb:180:in `instrument'
+/usr/local/bundle/gems/actionpack-6.0.4.7/lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+/usr/local/bundle/gems/actionpack-6.0.4.7/lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+/usr/local/bundle/gems/activerecord-6.0.4.7/lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+/usr/local/bundle/gems/actionpack-6.0.4.7/lib/abstract_controller/base.rb:136:in `process'
+/usr/local/bundle/gems/actionview-6.0.4.7/lib/action_view/rendering.rb:39:in `process'
+/usr/local/bundle/gems/actionpack-6.0.4.7/lib/action_controller/metal.rb:190:in `dispatch'
+/usr/local/bundle/gems/actionpack-6.0.4.7/lib/action_controller/metal.rb:254:in `dispatch'
+/usr/local/bundle/gems/actionpack-6.0.4.7/lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+/usr/local/bundle/gems/actionpack-6.0.4.7/lib/action_dispatch/routing/route_set.rb:33:in `serve'
+/usr/local/bundle/gems/actionpack-6.0.4.7/lib/action_dispatch/journey/router.rb:49:in `block in serve'
+/usr/local/bundle/gems/actionpack-6.0.4.7/lib/action_dispatch/journey/router.rb:32:in `each'
+/usr/local/bundle/gems/actionpack-6.0.4.7/lib/action_dispatch/journey/router.rb:32:in `serve'
+/usr/local/bundle/gems/actionpack-6.0.4.7/lib/action_dispatch/routing/route_set.rb:834:in `call'
+/usr/local/bundle/gems/rack-2.2.3/lib/rack/tempfile_reaper.rb:15:in `call'
+/usr/local/bundle/gems/rack-2.2.3/lib/rack/etag.rb:27:in `call'
+/usr/local/bundle/gems/rack-2.2.3/lib/rack/conditional_get.rb:40:in `call'
+/usr/local/bundle/gems/rack-2.2.3/lib/rack/head.rb:12:in `call'
+/usr/local/bundle/gems/actionpack-6.0.4.7/lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+/usr/local/bundle/gems/rack-2.2.3/lib/rack/session/abstract/id.rb:266:in `context'
+/usr/local/bundle/gems/rack-2.2.3/lib/rack/session/abstract/id.rb:260:in `call'
+/usr/local/bundle/gems/actionpack-6.0.4.7/lib/action_dispatch/middleware/cookies.rb:654:in `call'
+/usr/local/bundle/gems/activerecord-6.0.4.7/lib/active_record/migration.rb:567:in `call'
+/usr/local/bundle/gems/actionpack-6.0.4.7/lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+/usr/local/bundle/gems/activesupport-6.0.4.7/lib/active_support/callbacks.rb:101:in `run_callbacks'
+/usr/local/bundle/gems/actionpack-6.0.4.7/lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+/usr/local/bundle/gems/actionpack-6.0.4.7/lib/action_dispatch/middleware/executor.rb:14:in `call'
+/usr/local/bundle/gems/actionpack-6.0.4.7/lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+/usr/local/bundle/gems/actionpack-6.0.4.7/lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+/usr/local/bundle/gems/web-console-4.2.0/lib/web_console/middleware.rb:132:in `call_app'
+/usr/local/bundle/gems/web-console-4.2.0/lib/web_console/middleware.rb:19:in `block in call'
+/usr/local/bundle/gems/web-console-4.2.0/lib/web_console/middleware.rb:17:in `catch'
+/usr/local/bundle/gems/web-console-4.2.0/lib/web_console/middleware.rb:17:in `call'
+/usr/local/bundle/gems/actionpack-6.0.4.7/lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+/usr/local/bundle/gems/railties-6.0.4.7/lib/rails/rack/logger.rb:37:in `call_app'
+/usr/local/bundle/gems/railties-6.0.4.7/lib/rails/rack/logger.rb:26:in `block in call'
+/usr/local/bundle/gems/activesupport-6.0.4.7/lib/active_support/tagged_logging.rb:80:in `block in tagged'
+/usr/local/bundle/gems/activesupport-6.0.4.7/lib/active_support/tagged_logging.rb:28:in `tagged'
+/usr/local/bundle/gems/activesupport-6.0.4.7/lib/active_support/tagged_logging.rb:80:in `tagged'
+/usr/local/bundle/gems/railties-6.0.4.7/lib/rails/rack/logger.rb:26:in `call'
+/usr/local/bundle/gems/sprockets-rails-3.4.2/lib/sprockets/rails/quiet_assets.rb:13:in `call'
+/usr/local/bundle/gems/actionpack-6.0.4.7/lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+/usr/local/bundle/gems/actionpack-6.0.4.7/lib/action_dispatch/middleware/request_id.rb:27:in `call'
+/usr/local/bundle/gems/rack-2.2.3/lib/rack/method_override.rb:24:in `call'
+/usr/local/bundle/gems/rack-2.2.3/lib/rack/runtime.rb:22:in `call'
+/usr/local/bundle/gems/activesupport-6.0.4.7/lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+/usr/local/bundle/gems/actionpack-6.0.4.7/lib/action_dispatch/middleware/executor.rb:14:in `call'
+/usr/local/bundle/gems/actionpack-6.0.4.7/lib/action_dispatch/middleware/static.rb:126:in `call'
+/usr/local/bundle/gems/rack-2.2.3/lib/rack/sendfile.rb:110:in `call'
+/usr/local/bundle/gems/actionpack-6.0.4.7/lib/action_dispatch/middleware/host_authorization.rb:103:in `call'
+/usr/local/bundle/gems/railties-6.0.4.7/lib/rails/engine.rb:527:in `call'
+/usr/local/bundle/gems/puma-3.12.6/lib/puma/configuration.rb:227:in `call'
+/usr/local/bundle/gems/puma-3.12.6/lib/puma/server.rb:706:in `handle_request'
+/usr/local/bundle/gems/puma-3.12.6/lib/puma/server.rb:476:in `process_client'
+/usr/local/bundle/gems/puma-3.12.6/lib/puma/server.rb:334:in `block in run'
+/usr/local/bundle/gems/puma-3.12.6/lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Completed 500 Internal Server Error in 293ms (Views: 0.6ms | ActiveRecord: 0.0ms | Allocations: 5900)
+
+
+Started GET "/graphiql" for 192.168.32.1 at 2022-03-25 02:02:35 +0000
+Cannot render console from 192.168.32.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by GraphiQL::Rails::EditorsController#show as HTML
+  Parameters: {"graphql_path"=>"/graphql"}
+  Rendering /usr/local/bundle/gems/graphiql-rails-1.8.0/app/views/graphiql/rails/editors/show.html.erb
+  Rendered /usr/local/bundle/gems/graphiql-rails-1.8.0/app/views/graphiql/rails/editors/show.html.erb (Duration: 56.5ms | Allocations: 8779)
+Completed 200 OK in 60ms (Views: 58.9ms | ActiveRecord: 0.0ms | Allocations: 10081)
+
+
+Started POST "/graphql" for 192.168.32.1 at 2022-03-25 02:02:35 +0000
+Cannot render console from 192.168.32.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by GraphqlController#execute as */*
+  Parameters: {"query"=>"\n    query IntrospectionQuery {\n      __schema {\n        \n        queryType { name }\n        mutationType { name }\n        subscriptionType { name }\n        types {\n          ...FullType\n        }\n        directives {\n          name\n          description\n          \n          locations\n          args {\n            ...InputValue\n          }\n        }\n      }\n    }\n\n    fragment FullType on __Type {\n      kind\n      name\n      description\n      \n      fields(includeDeprecated: true) {\n        name\n        description\n        args {\n          ...InputValue\n        }\n        type {\n          ...TypeRef\n        }\n        isDeprecated\n        deprecationReason\n      }\n      inputFields {\n        ...InputValue\n      }\n      interfaces {\n        ...TypeRef\n      }\n      enumValues(includeDeprecated: true) {\n        name\n        description\n        isDeprecated\n        deprecationReason\n      }\n      possibleTypes {\n        ...TypeRef\n      }\n    }\n\n    fragment InputValue on __InputValue {\n      name\n      description\n      type { ...TypeRef }\n      defaultValue\n    }\n\n    fragment TypeRef on __Type {\n      kind\n      name\n      ofType {\n        kind\n        name\n        ofType {\n          kind\n          name\n          ofType {\n            kind\n            name\n            ofType {\n              kind\n              name\n              ofType {\n                kind\n                name\n                ofType {\n                  kind\n                  name\n                  ofType {\n                    kind\n                    name\n                  }\n                }\n              }\n            }\n          }\n        }\n      }\n    }\n  ", "operationName"=>"IntrospectionQuery", "graphql"=>{"query"=>"\n    query IntrospectionQuery {\n      __schema {\n        \n        queryType { name }\n        mutationType { name }\n        subscriptionType { name }\n        types {\n          ...FullType\n        }\n        directives {\n          name\n          description\n          \n          locations\n          args {\n            ...InputValue\n          }\n        }\n      }\n    }\n\n    fragment FullType on __Type {\n      kind\n      name\n      description\n      \n      fields(includeDeprecated: true) {\n        name\n        description\n        args {\n          ...InputValue\n        }\n        type {\n          ...TypeRef\n        }\n        isDeprecated\n        deprecationReason\n      }\n      inputFields {\n        ...InputValue\n      }\n      interfaces {\n        ...TypeRef\n      }\n      enumValues(includeDeprecated: true) {\n        name\n        description\n        isDeprecated\n        deprecationReason\n      }\n      possibleTypes {\n        ...TypeRef\n      }\n    }\n\n    fragment InputValue on __InputValue {\n      name\n      description\n      type { ...TypeRef }\n      defaultValue\n    }\n\n    fragment TypeRef on __Type {\n      kind\n      name\n      ofType {\n        kind\n        name\n        ofType {\n          kind\n          name\n          ofType {\n            kind\n            name\n            ofType {\n              kind\n              name\n              ofType {\n                kind\n                name\n                ofType {\n                  kind\n                  name\n                  ofType {\n                    kind\n                    name\n                  }\n                }\n              }\n            }\n          }\n        }\n      }\n    }\n  ", "operationName"=>"IntrospectionQuery"}}
+Completed 500 Internal Server Error in 93ms (ActiveRecord: 0.0ms | Allocations: 2398)
+
+
+  
+LoadError (Unable to autoload constant Types::BaseObject, expected /myapp/app/graphql/types/base_object.rb to define it):
+  
+app/graphql/types/mutation_type.rb:2:in `<module:Types>'
+app/graphql/types/mutation_type.rb:1:in `<top (required)>'
+app/graphql/ledger_schema.rb:2:in `<class:LedgerSchema>'
+app/graphql/ledger_schema.rb:1:in `<top (required)>'
+app/controllers/graphql_controller.rb:15:in `execute'
+Started GET "/graphiql" for 192.168.32.1 at 2022-03-25 02:03:14 +0000
+Cannot render console from 192.168.32.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by GraphiQL::Rails::EditorsController#show as HTML
+  Parameters: {"graphql_path"=>"/graphql"}
+  Rendering /usr/local/bundle/gems/graphiql-rails-1.8.0/app/views/graphiql/rails/editors/show.html.erb
+  Rendered /usr/local/bundle/gems/graphiql-rails-1.8.0/app/views/graphiql/rails/editors/show.html.erb (Duration: 57.2ms | Allocations: 8827)
+Completed 200 OK in 106ms (Views: 60.0ms | ActiveRecord: 0.0ms | Allocations: 11355)
+
+
+Started POST "/graphql" for 192.168.32.1 at 2022-03-25 02:03:14 +0000
+Cannot render console from 192.168.32.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by GraphqlController#execute as */*
+  Parameters: {"query"=>"\n    query IntrospectionQuery {\n      __schema {\n        \n        queryType { name }\n        mutationType { name }\n        subscriptionType { name }\n        types {\n          ...FullType\n        }\n        directives {\n          name\n          description\n          \n          locations\n          args {\n            ...InputValue\n          }\n        }\n      }\n    }\n\n    fragment FullType on __Type {\n      kind\n      name\n      description\n      \n      fields(includeDeprecated: true) {\n        name\n        description\n        args {\n          ...InputValue\n        }\n        type {\n          ...TypeRef\n        }\n        isDeprecated\n        deprecationReason\n      }\n      inputFields {\n        ...InputValue\n      }\n      interfaces {\n        ...TypeRef\n      }\n      enumValues(includeDeprecated: true) {\n        name\n        description\n        isDeprecated\n        deprecationReason\n      }\n      possibleTypes {\n        ...TypeRef\n      }\n    }\n\n    fragment InputValue on __InputValue {\n      name\n      description\n      type { ...TypeRef }\n      defaultValue\n    }\n\n    fragment TypeRef on __Type {\n      kind\n      name\n      ofType {\n        kind\n        name\n        ofType {\n          kind\n          name\n          ofType {\n            kind\n            name\n            ofType {\n              kind\n              name\n              ofType {\n                kind\n                name\n                ofType {\n                  kind\n                  name\n                  ofType {\n                    kind\n                    name\n                  }\n                }\n              }\n            }\n          }\n        }\n      }\n    }\n  ", "operationName"=>"IntrospectionQuery", "graphql"=>{"query"=>"\n    query IntrospectionQuery {\n      __schema {\n        \n        queryType { name }\n        mutationType { name }\n        subscriptionType { name }\n        types {\n          ...FullType\n        }\n        directives {\n          name\n          description\n          \n          locations\n          args {\n            ...InputValue\n          }\n        }\n      }\n    }\n\n    fragment FullType on __Type {\n      kind\n      name\n      description\n      \n      fields(includeDeprecated: true) {\n        name\n        description\n        args {\n          ...InputValue\n        }\n        type {\n          ...TypeRef\n        }\n        isDeprecated\n        deprecationReason\n      }\n      inputFields {\n        ...InputValue\n      }\n      interfaces {\n        ...TypeRef\n      }\n      enumValues(includeDeprecated: true) {\n        name\n        description\n        isDeprecated\n        deprecationReason\n      }\n      possibleTypes {\n        ...TypeRef\n      }\n    }\n\n    fragment InputValue on __InputValue {\n      name\n      description\n      type { ...TypeRef }\n      defaultValue\n    }\n\n    fragment TypeRef on __Type {\n      kind\n      name\n      ofType {\n        kind\n        name\n        ofType {\n          kind\n          name\n          ofType {\n            kind\n            name\n            ofType {\n              kind\n              name\n              ofType {\n                kind\n                name\n                ofType {\n                  kind\n                  name\n                  ofType {\n                    kind\n                    name\n                  }\n                }\n              }\n            }\n          }\n        }\n      }\n    }\n  ", "operationName"=>"IntrospectionQuery"}}
+uninitialized constant Types::Input
+/myapp/app/graphql/mutations/add_transaction.rb:3:in `<class:AddTransaction>'
+/myapp/app/graphql/mutations/add_transaction.rb:2:in `<module:Mutations>'
+/myapp/app/graphql/mutations/add_transaction.rb:1:in `<top (required)>'
+/usr/local/bundle/gems/activesupport-6.0.4.7/lib/active_support/dependencies/interlock.rb:14:in `block in loading'
+/usr/local/bundle/gems/activesupport-6.0.4.7/lib/active_support/concurrency/share_lock.rb:151:in `exclusive'
+/usr/local/bundle/gems/activesupport-6.0.4.7/lib/active_support/dependencies/interlock.rb:13:in `loading'
+/myapp/app/graphql/types/mutation_type.rb:3:in `<class:MutationType>'
+/myapp/app/graphql/types/mutation_type.rb:2:in `<module:Types>'
+/myapp/app/graphql/types/mutation_type.rb:1:in `<top (required)>'
+/usr/local/bundle/gems/activesupport-6.0.4.7/lib/active_support/dependencies/interlock.rb:14:in `block in loading'
+/usr/local/bundle/gems/activesupport-6.0.4.7/lib/active_support/concurrency/share_lock.rb:151:in `exclusive'
+/usr/local/bundle/gems/activesupport-6.0.4.7/lib/active_support/dependencies/interlock.rb:13:in `loading'
+/myapp/app/graphql/ledger_schema.rb:2:in `<class:LedgerSchema>'
+/myapp/app/graphql/ledger_schema.rb:1:in `<top (required)>'
+/usr/local/bundle/gems/activesupport-6.0.4.7/lib/active_support/dependencies/interlock.rb:14:in `block in loading'
+/usr/local/bundle/gems/activesupport-6.0.4.7/lib/active_support/concurrency/share_lock.rb:151:in `exclusive'
+/usr/local/bundle/gems/activesupport-6.0.4.7/lib/active_support/dependencies/interlock.rb:13:in `loading'
+/myapp/app/controllers/graphql_controller.rb:15:in `execute'
+/usr/local/bundle/gems/actionpack-6.0.4.7/lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+/usr/local/bundle/gems/actionpack-6.0.4.7/lib/abstract_controller/base.rb:195:in `process_action'
+/usr/local/bundle/gems/actionpack-6.0.4.7/lib/action_controller/metal/rendering.rb:30:in `process_action'
+/usr/local/bundle/gems/actionpack-6.0.4.7/lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+/usr/local/bundle/gems/activesupport-6.0.4.7/lib/active_support/callbacks.rb:135:in `run_callbacks'
+/usr/local/bundle/gems/actionpack-6.0.4.7/lib/abstract_controller/callbacks.rb:41:in `process_action'
+/usr/local/bundle/gems/actionpack-6.0.4.7/lib/action_controller/metal/rescue.rb:22:in `process_action'
+/usr/local/bundle/gems/actionpack-6.0.4.7/lib/action_controller/metal/instrumentation.rb:33:in `block in process_action'
+/usr/local/bundle/gems/activesupport-6.0.4.7/lib/active_support/notifications.rb:180:in `block in instrument'
+/usr/local/bundle/gems/activesupport-6.0.4.7/lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+/usr/local/bundle/gems/activesupport-6.0.4.7/lib/active_support/notifications.rb:180:in `instrument'
+/usr/local/bundle/gems/actionpack-6.0.4.7/lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+/usr/local/bundle/gems/actionpack-6.0.4.7/lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+/usr/local/bundle/gems/activerecord-6.0.4.7/lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+/usr/local/bundle/gems/actionpack-6.0.4.7/lib/abstract_controller/base.rb:136:in `process'
+/usr/local/bundle/gems/actionview-6.0.4.7/lib/action_view/rendering.rb:39:in `process'
+/usr/local/bundle/gems/actionpack-6.0.4.7/lib/action_controller/metal.rb:190:in `dispatch'
+/usr/local/bundle/gems/actionpack-6.0.4.7/lib/action_controller/metal.rb:254:in `dispatch'
+/usr/local/bundle/gems/actionpack-6.0.4.7/lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+/usr/local/bundle/gems/actionpack-6.0.4.7/lib/action_dispatch/routing/route_set.rb:33:in `serve'
+/usr/local/bundle/gems/actionpack-6.0.4.7/lib/action_dispatch/journey/router.rb:49:in `block in serve'
+/usr/local/bundle/gems/actionpack-6.0.4.7/lib/action_dispatch/journey/router.rb:32:in `each'
+/usr/local/bundle/gems/actionpack-6.0.4.7/lib/action_dispatch/journey/router.rb:32:in `serve'
+/usr/local/bundle/gems/actionpack-6.0.4.7/lib/action_dispatch/routing/route_set.rb:834:in `call'
+/usr/local/bundle/gems/rack-2.2.3/lib/rack/tempfile_reaper.rb:15:in `call'
+/usr/local/bundle/gems/rack-2.2.3/lib/rack/etag.rb:27:in `call'
+/usr/local/bundle/gems/rack-2.2.3/lib/rack/conditional_get.rb:40:in `call'
+/usr/local/bundle/gems/rack-2.2.3/lib/rack/head.rb:12:in `call'
+/usr/local/bundle/gems/actionpack-6.0.4.7/lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+/usr/local/bundle/gems/rack-2.2.3/lib/rack/session/abstract/id.rb:266:in `context'
+/usr/local/bundle/gems/rack-2.2.3/lib/rack/session/abstract/id.rb:260:in `call'
+/usr/local/bundle/gems/actionpack-6.0.4.7/lib/action_dispatch/middleware/cookies.rb:654:in `call'
+/usr/local/bundle/gems/activerecord-6.0.4.7/lib/active_record/migration.rb:567:in `call'
+/usr/local/bundle/gems/actionpack-6.0.4.7/lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+/usr/local/bundle/gems/activesupport-6.0.4.7/lib/active_support/callbacks.rb:101:in `run_callbacks'
+/usr/local/bundle/gems/actionpack-6.0.4.7/lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+/usr/local/bundle/gems/actionpack-6.0.4.7/lib/action_dispatch/middleware/executor.rb:14:in `call'
+/usr/local/bundle/gems/actionpack-6.0.4.7/lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+/usr/local/bundle/gems/actionpack-6.0.4.7/lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+/usr/local/bundle/gems/web-console-4.2.0/lib/web_console/middleware.rb:132:in `call_app'
+/usr/local/bundle/gems/web-console-4.2.0/lib/web_console/middleware.rb:19:in `block in call'
+/usr/local/bundle/gems/web-console-4.2.0/lib/web_console/middleware.rb:17:in `catch'
+/usr/local/bundle/gems/web-console-4.2.0/lib/web_console/middleware.rb:17:in `call'
+/usr/local/bundle/gems/actionpack-6.0.4.7/lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+/usr/local/bundle/gems/railties-6.0.4.7/lib/rails/rack/logger.rb:37:in `call_app'
+/usr/local/bundle/gems/railties-6.0.4.7/lib/rails/rack/logger.rb:26:in `block in call'
+/usr/local/bundle/gems/activesupport-6.0.4.7/lib/active_support/tagged_logging.rb:80:in `block in tagged'
+/usr/local/bundle/gems/activesupport-6.0.4.7/lib/active_support/tagged_logging.rb:28:in `tagged'
+/usr/local/bundle/gems/activesupport-6.0.4.7/lib/active_support/tagged_logging.rb:80:in `tagged'
+/usr/local/bundle/gems/railties-6.0.4.7/lib/rails/rack/logger.rb:26:in `call'
+/usr/local/bundle/gems/sprockets-rails-3.4.2/lib/sprockets/rails/quiet_assets.rb:13:in `call'
+/usr/local/bundle/gems/actionpack-6.0.4.7/lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+/usr/local/bundle/gems/actionpack-6.0.4.7/lib/action_dispatch/middleware/request_id.rb:27:in `call'
+/usr/local/bundle/gems/rack-2.2.3/lib/rack/method_override.rb:24:in `call'
+/usr/local/bundle/gems/rack-2.2.3/lib/rack/runtime.rb:22:in `call'
+/usr/local/bundle/gems/activesupport-6.0.4.7/lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+/usr/local/bundle/gems/actionpack-6.0.4.7/lib/action_dispatch/middleware/executor.rb:14:in `call'
+/usr/local/bundle/gems/actionpack-6.0.4.7/lib/action_dispatch/middleware/static.rb:126:in `call'
+/usr/local/bundle/gems/rack-2.2.3/lib/rack/sendfile.rb:110:in `call'
+/usr/local/bundle/gems/actionpack-6.0.4.7/lib/action_dispatch/middleware/host_authorization.rb:103:in `call'
+/usr/local/bundle/gems/railties-6.0.4.7/lib/rails/engine.rb:527:in `call'
+/usr/local/bundle/gems/puma-3.12.6/lib/puma/configuration.rb:227:in `call'
+/usr/local/bundle/gems/puma-3.12.6/lib/puma/server.rb:706:in `handle_request'
+/usr/local/bundle/gems/puma-3.12.6/lib/puma/server.rb:476:in `process_client'
+/usr/local/bundle/gems/puma-3.12.6/lib/puma/server.rb:334:in `block in run'
+/usr/local/bundle/gems/puma-3.12.6/lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Completed 500 Internal Server Error in 250ms (Views: 0.7ms | ActiveRecord: 0.0ms | Allocations: 5795)
+
+
+Started GET "/graphiql" for 192.168.32.1 at 2022-03-25 02:06:35 +0000
+Cannot render console from 192.168.32.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by GraphiQL::Rails::EditorsController#show as HTML
+  Parameters: {"graphql_path"=>"/graphql"}
+  Rendering /usr/local/bundle/gems/graphiql-rails-1.8.0/app/views/graphiql/rails/editors/show.html.erb
+  Rendered /usr/local/bundle/gems/graphiql-rails-1.8.0/app/views/graphiql/rails/editors/show.html.erb (Duration: 58.5ms | Allocations: 8773)
+Completed 200 OK in 63ms (Views: 61.2ms | ActiveRecord: 0.0ms | Allocations: 10071)
+
+
+Started POST "/graphql" for 192.168.32.1 at 2022-03-25 02:06:36 +0000
+Cannot render console from 192.168.32.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by GraphqlController#execute as */*
+  Parameters: {"query"=>"\n    query IntrospectionQuery {\n      __schema {\n        \n        queryType { name }\n        mutationType { name }\n        subscriptionType { name }\n        types {\n          ...FullType\n        }\n        directives {\n          name\n          description\n          \n          locations\n          args {\n            ...InputValue\n          }\n        }\n      }\n    }\n\n    fragment FullType on __Type {\n      kind\n      name\n      description\n      \n      fields(includeDeprecated: true) {\n        name\n        description\n        args {\n          ...InputValue\n        }\n        type {\n          ...TypeRef\n        }\n        isDeprecated\n        deprecationReason\n      }\n      inputFields {\n        ...InputValue\n      }\n      interfaces {\n        ...TypeRef\n      }\n      enumValues(includeDeprecated: true) {\n        name\n        description\n        isDeprecated\n        deprecationReason\n      }\n      possibleTypes {\n        ...TypeRef\n      }\n    }\n\n    fragment InputValue on __InputValue {\n      name\n      description\n      type { ...TypeRef }\n      defaultValue\n    }\n\n    fragment TypeRef on __Type {\n      kind\n      name\n      ofType {\n        kind\n        name\n        ofType {\n          kind\n          name\n          ofType {\n            kind\n            name\n            ofType {\n              kind\n              name\n              ofType {\n                kind\n                name\n                ofType {\n                  kind\n                  name\n                  ofType {\n                    kind\n                    name\n                  }\n                }\n              }\n            }\n          }\n        }\n      }\n    }\n  ", "operationName"=>"IntrospectionQuery", "graphql"=>{"query"=>"\n    query IntrospectionQuery {\n      __schema {\n        \n        queryType { name }\n        mutationType { name }\n        subscriptionType { name }\n        types {\n          ...FullType\n        }\n        directives {\n          name\n          description\n          \n          locations\n          args {\n            ...InputValue\n          }\n        }\n      }\n    }\n\n    fragment FullType on __Type {\n      kind\n      name\n      description\n      \n      fields(includeDeprecated: true) {\n        name\n        description\n        args {\n          ...InputValue\n        }\n        type {\n          ...TypeRef\n        }\n        isDeprecated\n        deprecationReason\n      }\n      inputFields {\n        ...InputValue\n      }\n      interfaces {\n        ...TypeRef\n      }\n      enumValues(includeDeprecated: true) {\n        name\n        description\n        isDeprecated\n        deprecationReason\n      }\n      possibleTypes {\n        ...TypeRef\n      }\n    }\n\n    fragment InputValue on __InputValue {\n      name\n      description\n      type { ...TypeRef }\n      defaultValue\n    }\n\n    fragment TypeRef on __Type {\n      kind\n      name\n      ofType {\n        kind\n        name\n        ofType {\n          kind\n          name\n          ofType {\n            kind\n            name\n            ofType {\n              kind\n              name\n              ofType {\n                kind\n                name\n                ofType {\n                  kind\n                  name\n                  ofType {\n                    kind\n                    name\n                  }\n                }\n              }\n            }\n          }\n        }\n      }\n    }\n  ", "operationName"=>"IntrospectionQuery"}}
+Completed 500 Internal Server Error in 125ms (ActiveRecord: 0.0ms | Allocations: 2392)
+
+
+  
+LoadError (Unable to autoload constant Types::BaseObject, expected /myapp/app/graphql/types/base_object.rb to define it):
+  
+app/graphql/types/mutation_type.rb:2:in `<module:Types>'
+app/graphql/types/mutation_type.rb:1:in `<top (required)>'
+app/graphql/ledger_schema.rb:2:in `<class:LedgerSchema>'
+app/graphql/ledger_schema.rb:1:in `<top (required)>'
+app/controllers/graphql_controller.rb:15:in `execute'
+Started GET "/graphiql" for 192.168.32.1 at 2022-03-25 02:06:38 +0000
+Cannot render console from 192.168.32.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by GraphiQL::Rails::EditorsController#show as HTML
+  Parameters: {"graphql_path"=>"/graphql"}
+  Rendering /usr/local/bundle/gems/graphiql-rails-1.8.0/app/views/graphiql/rails/editors/show.html.erb
+  Rendered /usr/local/bundle/gems/graphiql-rails-1.8.0/app/views/graphiql/rails/editors/show.html.erb (Duration: 64.0ms | Allocations: 8805)
+Completed 200 OK in 68ms (Views: 66.8ms | ActiveRecord: 0.0ms | Allocations: 10103)
+
+
+Started POST "/graphql" for 192.168.32.1 at 2022-03-25 02:06:38 +0000
+Cannot render console from 192.168.32.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by GraphqlController#execute as */*
+  Parameters: {"query"=>"\n    query IntrospectionQuery {\n      __schema {\n        \n        queryType { name }\n        mutationType { name }\n        subscriptionType { name }\n        types {\n          ...FullType\n        }\n        directives {\n          name\n          description\n          \n          locations\n          args {\n            ...InputValue\n          }\n        }\n      }\n    }\n\n    fragment FullType on __Type {\n      kind\n      name\n      description\n      \n      fields(includeDeprecated: true) {\n        name\n        description\n        args {\n          ...InputValue\n        }\n        type {\n          ...TypeRef\n        }\n        isDeprecated\n        deprecationReason\n      }\n      inputFields {\n        ...InputValue\n      }\n      interfaces {\n        ...TypeRef\n      }\n      enumValues(includeDeprecated: true) {\n        name\n        description\n        isDeprecated\n        deprecationReason\n      }\n      possibleTypes {\n        ...TypeRef\n      }\n    }\n\n    fragment InputValue on __InputValue {\n      name\n      description\n      type { ...TypeRef }\n      defaultValue\n    }\n\n    fragment TypeRef on __Type {\n      kind\n      name\n      ofType {\n        kind\n        name\n        ofType {\n          kind\n          name\n          ofType {\n            kind\n            name\n            ofType {\n              kind\n              name\n              ofType {\n                kind\n                name\n                ofType {\n                  kind\n                  name\n                  ofType {\n                    kind\n                    name\n                  }\n                }\n              }\n            }\n          }\n        }\n      }\n    }\n  ", "operationName"=>"IntrospectionQuery", "graphql"=>{"query"=>"\n    query IntrospectionQuery {\n      __schema {\n        \n        queryType { name }\n        mutationType { name }\n        subscriptionType { name }\n        types {\n          ...FullType\n        }\n        directives {\n          name\n          description\n          \n          locations\n          args {\n            ...InputValue\n          }\n        }\n      }\n    }\n\n    fragment FullType on __Type {\n      kind\n      name\n      description\n      \n      fields(includeDeprecated: true) {\n        name\n        description\n        args {\n          ...InputValue\n        }\n        type {\n          ...TypeRef\n        }\n        isDeprecated\n        deprecationReason\n      }\n      inputFields {\n        ...InputValue\n      }\n      interfaces {\n        ...TypeRef\n      }\n      enumValues(includeDeprecated: true) {\n        name\n        description\n        isDeprecated\n        deprecationReason\n      }\n      possibleTypes {\n        ...TypeRef\n      }\n    }\n\n    fragment InputValue on __InputValue {\n      name\n      description\n      type { ...TypeRef }\n      defaultValue\n    }\n\n    fragment TypeRef on __Type {\n      kind\n      name\n      ofType {\n        kind\n        name\n        ofType {\n          kind\n          name\n          ofType {\n            kind\n            name\n            ofType {\n              kind\n              name\n              ofType {\n                kind\n                name\n                ofType {\n                  kind\n                  name\n                  ofType {\n                    kind\n                    name\n                  }\n                }\n              }\n            }\n          }\n        }\n      }\n    }\n  ", "operationName"=>"IntrospectionQuery"}}
+Completed 500 Internal Server Error in 108ms (ActiveRecord: 0.0ms | Allocations: 2395)
+
+
+  
+LoadError (Unable to autoload constant Types::BaseObject, expected /myapp/app/graphql/types/base_object.rb to define it):
+  
+app/graphql/types/mutation_type.rb:2:in `<module:Types>'
+app/graphql/types/mutation_type.rb:1:in `<top (required)>'
+app/graphql/ledger_schema.rb:2:in `<class:LedgerSchema>'
+app/graphql/ledger_schema.rb:1:in `<top (required)>'
+app/controllers/graphql_controller.rb:15:in `execute'
+Started GET "/graphiql" for 192.168.32.1 at 2022-03-25 02:07:11 +0000
+Cannot render console from 192.168.32.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (4.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by GraphiQL::Rails::EditorsController#show as HTML
+  Parameters: {"graphql_path"=>"/graphql"}
+  Rendering /usr/local/bundle/gems/graphiql-rails-1.8.0/app/views/graphiql/rails/editors/show.html.erb
+  Rendered /usr/local/bundle/gems/graphiql-rails-1.8.0/app/views/graphiql/rails/editors/show.html.erb (Duration: 623.1ms | Allocations: 286893)
+Completed 200 OK in 678ms (Views: 648.9ms | ActiveRecord: 0.0ms | Allocations: 290165)
+
+
+Started POST "/graphql" for 192.168.32.1 at 2022-03-25 02:07:12 +0000
+Cannot render console from 192.168.32.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by GraphqlController#execute as */*
+  Parameters: {"query"=>"\n    query IntrospectionQuery {\n      __schema {\n        \n        queryType { name }\n        mutationType { name }\n        subscriptionType { name }\n        types {\n          ...FullType\n        }\n        directives {\n          name\n          description\n          \n          locations\n          args {\n            ...InputValue\n          }\n        }\n      }\n    }\n\n    fragment FullType on __Type {\n      kind\n      name\n      description\n      \n      fields(includeDeprecated: true) {\n        name\n        description\n        args {\n          ...InputValue\n        }\n        type {\n          ...TypeRef\n        }\n        isDeprecated\n        deprecationReason\n      }\n      inputFields {\n        ...InputValue\n      }\n      interfaces {\n        ...TypeRef\n      }\n      enumValues(includeDeprecated: true) {\n        name\n        description\n        isDeprecated\n        deprecationReason\n      }\n      possibleTypes {\n        ...TypeRef\n      }\n    }\n\n    fragment InputValue on __InputValue {\n      name\n      description\n      type { ...TypeRef }\n      defaultValue\n    }\n\n    fragment TypeRef on __Type {\n      kind\n      name\n      ofType {\n        kind\n        name\n        ofType {\n          kind\n          name\n          ofType {\n            kind\n            name\n            ofType {\n              kind\n              name\n              ofType {\n                kind\n                name\n                ofType {\n                  kind\n                  name\n                  ofType {\n                    kind\n                    name\n                  }\n                }\n              }\n            }\n          }\n        }\n      }\n    }\n  ", "operationName"=>"IntrospectionQuery", "graphql"=>{"query"=>"\n    query IntrospectionQuery {\n      __schema {\n        \n        queryType { name }\n        mutationType { name }\n        subscriptionType { name }\n        types {\n          ...FullType\n        }\n        directives {\n          name\n          description\n          \n          locations\n          args {\n            ...InputValue\n          }\n        }\n      }\n    }\n\n    fragment FullType on __Type {\n      kind\n      name\n      description\n      \n      fields(includeDeprecated: true) {\n        name\n        description\n        args {\n          ...InputValue\n        }\n        type {\n          ...TypeRef\n        }\n        isDeprecated\n        deprecationReason\n      }\n      inputFields {\n        ...InputValue\n      }\n      interfaces {\n        ...TypeRef\n      }\n      enumValues(includeDeprecated: true) {\n        name\n        description\n        isDeprecated\n        deprecationReason\n      }\n      possibleTypes {\n        ...TypeRef\n      }\n    }\n\n    fragment InputValue on __InputValue {\n      name\n      description\n      type { ...TypeRef }\n      defaultValue\n    }\n\n    fragment TypeRef on __Type {\n      kind\n      name\n      ofType {\n        kind\n        name\n        ofType {\n          kind\n          name\n          ofType {\n            kind\n            name\n            ofType {\n              kind\n              name\n              ofType {\n                kind\n                name\n                ofType {\n                  kind\n                  name\n                  ofType {\n                    kind\n                    name\n                  }\n                }\n              }\n            }\n          }\n        }\n      }\n    }\n  ", "operationName"=>"IntrospectionQuery"}}
+Completed 200 OK in 269ms (Views: 4.7ms | ActiveRecord: 0.0ms | Allocations: 31861)
+
+
+Started GET "/graphiql" for 192.168.32.1 at 2022-03-25 02:07:14 +0000
+Cannot render console from 192.168.32.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by GraphiQL::Rails::EditorsController#show as HTML
+  Parameters: {"graphql_path"=>"/graphql"}
+  Rendering /usr/local/bundle/gems/graphiql-rails-1.8.0/app/views/graphiql/rails/editors/show.html.erb
+  Rendered /usr/local/bundle/gems/graphiql-rails-1.8.0/app/views/graphiql/rails/editors/show.html.erb (Duration: 58.4ms | Allocations: 8779)
+Completed 200 OK in 63ms (Views: 61.1ms | ActiveRecord: 0.0ms | Allocations: 10081)
+
+
+Started POST "/graphql" for 192.168.32.1 at 2022-03-25 02:07:14 +0000
+Cannot render console from 192.168.32.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by GraphqlController#execute as */*
+  Parameters: {"query"=>"\n    query IntrospectionQuery {\n      __schema {\n        \n        queryType { name }\n        mutationType { name }\n        subscriptionType { name }\n        types {\n          ...FullType\n        }\n        directives {\n          name\n          description\n          \n          locations\n          args {\n            ...InputValue\n          }\n        }\n      }\n    }\n\n    fragment FullType on __Type {\n      kind\n      name\n      description\n      \n      fields(includeDeprecated: true) {\n        name\n        description\n        args {\n          ...InputValue\n        }\n        type {\n          ...TypeRef\n        }\n        isDeprecated\n        deprecationReason\n      }\n      inputFields {\n        ...InputValue\n      }\n      interfaces {\n        ...TypeRef\n      }\n      enumValues(includeDeprecated: true) {\n        name\n        description\n        isDeprecated\n        deprecationReason\n      }\n      possibleTypes {\n        ...TypeRef\n      }\n    }\n\n    fragment InputValue on __InputValue {\n      name\n      description\n      type { ...TypeRef }\n      defaultValue\n    }\n\n    fragment TypeRef on __Type {\n      kind\n      name\n      ofType {\n        kind\n        name\n        ofType {\n          kind\n          name\n          ofType {\n            kind\n            name\n            ofType {\n              kind\n              name\n              ofType {\n                kind\n                name\n                ofType {\n                  kind\n                  name\n                  ofType {\n                    kind\n                    name\n                  }\n                }\n              }\n            }\n          }\n        }\n      }\n    }\n  ", "operationName"=>"IntrospectionQuery", "graphql"=>{"query"=>"\n    query IntrospectionQuery {\n      __schema {\n        \n        queryType { name }\n        mutationType { name }\n        subscriptionType { name }\n        types {\n          ...FullType\n        }\n        directives {\n          name\n          description\n          \n          locations\n          args {\n            ...InputValue\n          }\n        }\n      }\n    }\n\n    fragment FullType on __Type {\n      kind\n      name\n      description\n      \n      fields(includeDeprecated: true) {\n        name\n        description\n        args {\n          ...InputValue\n        }\n        type {\n          ...TypeRef\n        }\n        isDeprecated\n        deprecationReason\n      }\n      inputFields {\n        ...InputValue\n      }\n      interfaces {\n        ...TypeRef\n      }\n      enumValues(includeDeprecated: true) {\n        name\n        description\n        isDeprecated\n        deprecationReason\n      }\n      possibleTypes {\n        ...TypeRef\n      }\n    }\n\n    fragment InputValue on __InputValue {\n      name\n      description\n      type { ...TypeRef }\n      defaultValue\n    }\n\n    fragment TypeRef on __Type {\n      kind\n      name\n      ofType {\n        kind\n        name\n        ofType {\n          kind\n          name\n          ofType {\n            kind\n            name\n            ofType {\n              kind\n              name\n              ofType {\n                kind\n                name\n                ofType {\n                  kind\n                  name\n                  ofType {\n                    kind\n                    name\n                  }\n                }\n              }\n            }\n          }\n        }\n      }\n    }\n  ", "operationName"=>"IntrospectionQuery"}}
+Completed 200 OK in 57ms (Views: 4.5ms | ActiveRecord: 0.0ms | Allocations: 26601)
+
+
+Started POST "/graphql" for 192.168.32.1 at 2022-03-25 02:11:22 +0000
+Cannot render console from 192.168.32.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by GraphqlController#execute as */*
+  Parameters: {"query"=>"mutation {\n  addTransaction(input: { params: { \n    address: \"0x01b868b3d2c9ccb62168efd82b8db5e9059ee7fe\", \n    txnHash: \"0xb64b160ebbc1870328cb4c0d72fe757e1a5145b608505a14241b0235360947dc\",\n    summary: \"GraphQL tutorials\",\n    from: \"John Doe\",\n    to: \"Jane Doe\",\n    location: \"25 East Washington Suite 509 Chicago IL 60602\"\n  }}) {\n    transaction {\n      id\n      address\n      txnHash\n      summary\n      from\n      to\n      location\n    }\n  }\n}\n", "variables"=>nil, "graphql"=>{"query"=>"mutation {\n  addTransaction(input: { params: { \n    address: \"0x01b868b3d2c9ccb62168efd82b8db5e9059ee7fe\", \n    txnHash: \"0xb64b160ebbc1870328cb4c0d72fe757e1a5145b608505a14241b0235360947dc\",\n    summary: \"GraphQL tutorials\",\n    from: \"John Doe\",\n    to: \"Jane Doe\",\n    location: \"25 East Washington Suite 509 Chicago IL 60602\"\n  }}) {\n    transaction {\n      id\n      address\n      txnHash\n      summary\n      from\n      to\n      location\n    }\n  }\n}\n", "variables"=>nil}}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTransaction Create (6.2ms)[0m  [1m[32mINSERT INTO "transactions" ("txn_hash", "summary", "from", "to", "location", "address") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["txn_hash", "0xb64b160ebbc1870328cb4c0d72fe757e1a5145b608505a14241b0235360947dc"], ["summary", "GraphQL tutorials"], ["from", "John Doe"], ["to", "Jane Doe"], ["location", "25 East Washington Suite 509 Chicago IL 60602"], ["address", "0x01b868b3d2c9ccb62168efd82b8db5e9059ee7fe"]]
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 85ms (Views: 0.3ms | ActiveRecord: 14.1ms | Allocations: 8001)
+
+
+Started POST "/graphql" for 192.168.32.1 at 2022-03-25 02:13:34 +0000
+Cannot render console from 192.168.32.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by GraphqlController#execute as */*
+  Parameters: {"query"=>"{\n    transaction(\n        address: \"0x01b868b3d2c9ccb62168efd82b8db5e9059ee7fe\", \n        txnHash: \"0xb64b160ebbc1870328cb4c0d72fe757e1a5145b608505a14241b0235360947dc\"\n    ) {\n        id\n        address\n        txnHash\n        summary\n        from\n        to\n        location\n    }\n}\n", "variables"=>nil, "graphql"=>{"query"=>"{\n    transaction(\n        address: \"0x01b868b3d2c9ccb62168efd82b8db5e9059ee7fe\", \n        txnHash: \"0xb64b160ebbc1870328cb4c0d72fe757e1a5145b608505a14241b0235360947dc\"\n    ) {\n        id\n        address\n        txnHash\n        summary\n        from\n        to\n        location\n    }\n}\n", "variables"=>nil}}
+  [1m[36mTransaction Load (1.5ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."address" = $1 AND "transactions"."txn_hash" = $2 LIMIT $3[0m  [["address", "0x01b868b3d2c9ccb62168efd82b8db5e9059ee7fe"], ["txn_hash", "0xb64b160ebbc1870328cb4c0d72fe757e1a5145b608505a14241b0235360947dc"], ["LIMIT", 1]]
+Completed 200 OK in 239ms (Views: 0.2ms | ActiveRecord: 4.7ms | Allocations: 11590)
+
+
+Started GET "/graphiql" for 192.168.32.1 at 2022-03-25 03:25:46 +0000
+Cannot render console from 192.168.32.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (4.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by GraphiQL::Rails::EditorsController#show as HTML
+  Parameters: {"graphql_path"=>"/graphql"}
+  Rendering /usr/local/bundle/gems/graphiql-rails-1.8.0/app/views/graphiql/rails/editors/show.html.erb
+  Rendered /usr/local/bundle/gems/graphiql-rails-1.8.0/app/views/graphiql/rails/editors/show.html.erb (Duration: 676.6ms | Allocations: 286892)
+Completed 200 OK in 749ms (Views: 716.1ms | ActiveRecord: 0.0ms | Allocations: 290164)
+
+
+Started POST "/graphql" for 192.168.32.1 at 2022-03-25 03:25:48 +0000
+Cannot render console from 192.168.32.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by GraphqlController#execute as */*
+  Parameters: {"query"=>"\n    query IntrospectionQuery {\n      __schema {\n        \n        queryType { name }\n        mutationType { name }\n        subscriptionType { name }\n        types {\n          ...FullType\n        }\n        directives {\n          name\n          description\n          \n          locations\n          args {\n            ...InputValue\n          }\n        }\n      }\n    }\n\n    fragment FullType on __Type {\n      kind\n      name\n      description\n      \n      fields(includeDeprecated: true) {\n        name\n        description\n        args {\n          ...InputValue\n        }\n        type {\n          ...TypeRef\n        }\n        isDeprecated\n        deprecationReason\n      }\n      inputFields {\n        ...InputValue\n      }\n      interfaces {\n        ...TypeRef\n      }\n      enumValues(includeDeprecated: true) {\n        name\n        description\n        isDeprecated\n        deprecationReason\n      }\n      possibleTypes {\n        ...TypeRef\n      }\n    }\n\n    fragment InputValue on __InputValue {\n      name\n      description\n      type { ...TypeRef }\n      defaultValue\n    }\n\n    fragment TypeRef on __Type {\n      kind\n      name\n      ofType {\n        kind\n        name\n        ofType {\n          kind\n          name\n          ofType {\n            kind\n            name\n            ofType {\n              kind\n              name\n              ofType {\n                kind\n                name\n                ofType {\n                  kind\n                  name\n                  ofType {\n                    kind\n                    name\n                  }\n                }\n              }\n            }\n          }\n        }\n      }\n    }\n  ", "operationName"=>"IntrospectionQuery", "graphql"=>{"query"=>"\n    query IntrospectionQuery {\n      __schema {\n        \n        queryType { name }\n        mutationType { name }\n        subscriptionType { name }\n        types {\n          ...FullType\n        }\n        directives {\n          name\n          description\n          \n          locations\n          args {\n            ...InputValue\n          }\n        }\n      }\n    }\n\n    fragment FullType on __Type {\n      kind\n      name\n      description\n      \n      fields(includeDeprecated: true) {\n        name\n        description\n        args {\n          ...InputValue\n        }\n        type {\n          ...TypeRef\n        }\n        isDeprecated\n        deprecationReason\n      }\n      inputFields {\n        ...InputValue\n      }\n      interfaces {\n        ...TypeRef\n      }\n      enumValues(includeDeprecated: true) {\n        name\n        description\n        isDeprecated\n        deprecationReason\n      }\n      possibleTypes {\n        ...TypeRef\n      }\n    }\n\n    fragment InputValue on __InputValue {\n      name\n      description\n      type { ...TypeRef }\n      defaultValue\n    }\n\n    fragment TypeRef on __Type {\n      kind\n      name\n      ofType {\n        kind\n        name\n        ofType {\n          kind\n          name\n          ofType {\n            kind\n            name\n            ofType {\n              kind\n              name\n              ofType {\n                kind\n                name\n                ofType {\n                  kind\n                  name\n                  ofType {\n                    kind\n                    name\n                  }\n                }\n              }\n            }\n          }\n        }\n      }\n    }\n  ", "operationName"=>"IntrospectionQuery"}}
+Completed 500 Internal Server Error in 212ms (ActiveRecord: 0.0ms | Allocations: 5071)
+
+
+  
+SyntaxError (/myapp/app/graphql/mutations/update_transaction.rb:34: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/graphql/mutations/update_transaction.rb:34: syntax error, unexpected end-of-input, expecting `end'
+app/graphql/mutations/update_transaction.rb:34: syntax error, unexpected end-of-input, expecting `end'
+app/graphql/mutations/update_transaction.rb:34: syntax error, unexpected end-of-input, expecting `end'
+app/graphql/types/mutation_type.rb:4:in `<class:MutationType>'
+app/graphql/types/mutation_type.rb:2:in `<module:Types>'
+app/graphql/types/mutation_type.rb:1:in `<top (required)>'
+app/graphql/ledger_schema.rb:2:in `<class:LedgerSchema>'
+app/graphql/ledger_schema.rb:1:in `<top (required)>'
+app/controllers/graphql_controller.rb:15:in `execute'
+Started GET "/graphiql" for 192.168.32.1 at 2022-03-25 03:26:25 +0000
+Cannot render console from 192.168.32.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by GraphiQL::Rails::EditorsController#show as HTML
+  Parameters: {"graphql_path"=>"/graphql"}
+  Rendering /usr/local/bundle/gems/graphiql-rails-1.8.0/app/views/graphiql/rails/editors/show.html.erb
+  Rendered /usr/local/bundle/gems/graphiql-rails-1.8.0/app/views/graphiql/rails/editors/show.html.erb (Duration: 60.0ms | Allocations: 8828)
+Completed 200 OK in 117ms (Views: 62.9ms | ActiveRecord: 0.0ms | Allocations: 11356)
+
+
+Started POST "/graphql" for 192.168.32.1 at 2022-03-25 03:26:26 +0000
+Cannot render console from 192.168.32.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by GraphqlController#execute as */*
+  Parameters: {"query"=>"\n    query IntrospectionQuery {\n      __schema {\n        \n        queryType { name }\n        mutationType { name }\n        subscriptionType { name }\n        types {\n          ...FullType\n        }\n        directives {\n          name\n          description\n          \n          locations\n          args {\n            ...InputValue\n          }\n        }\n      }\n    }\n\n    fragment FullType on __Type {\n      kind\n      name\n      description\n      \n      fields(includeDeprecated: true) {\n        name\n        description\n        args {\n          ...InputValue\n        }\n        type {\n          ...TypeRef\n        }\n        isDeprecated\n        deprecationReason\n      }\n      inputFields {\n        ...InputValue\n      }\n      interfaces {\n        ...TypeRef\n      }\n      enumValues(includeDeprecated: true) {\n        name\n        description\n        isDeprecated\n        deprecationReason\n      }\n      possibleTypes {\n        ...TypeRef\n      }\n    }\n\n    fragment InputValue on __InputValue {\n      name\n      description\n      type { ...TypeRef }\n      defaultValue\n    }\n\n    fragment TypeRef on __Type {\n      kind\n      name\n      ofType {\n        kind\n        name\n        ofType {\n          kind\n          name\n          ofType {\n            kind\n            name\n            ofType {\n              kind\n              name\n              ofType {\n                kind\n                name\n                ofType {\n                  kind\n                  name\n                  ofType {\n                    kind\n                    name\n                  }\n                }\n              }\n            }\n          }\n        }\n      }\n    }\n  ", "operationName"=>"IntrospectionQuery", "graphql"=>{"query"=>"\n    query IntrospectionQuery {\n      __schema {\n        \n        queryType { name }\n        mutationType { name }\n        subscriptionType { name }\n        types {\n          ...FullType\n        }\n        directives {\n          name\n          description\n          \n          locations\n          args {\n            ...InputValue\n          }\n        }\n      }\n    }\n\n    fragment FullType on __Type {\n      kind\n      name\n      description\n      \n      fields(includeDeprecated: true) {\n        name\n        description\n        args {\n          ...InputValue\n        }\n        type {\n          ...TypeRef\n        }\n        isDeprecated\n        deprecationReason\n      }\n      inputFields {\n        ...InputValue\n      }\n      interfaces {\n        ...TypeRef\n      }\n      enumValues(includeDeprecated: true) {\n        name\n        description\n        isDeprecated\n        deprecationReason\n      }\n      possibleTypes {\n        ...TypeRef\n      }\n    }\n\n    fragment InputValue on __InputValue {\n      name\n      description\n      type { ...TypeRef }\n      defaultValue\n    }\n\n    fragment TypeRef on __Type {\n      kind\n      name\n      ofType {\n        kind\n        name\n        ofType {\n          kind\n          name\n          ofType {\n            kind\n            name\n            ofType {\n              kind\n              name\n              ofType {\n                kind\n                name\n                ofType {\n                  kind\n                  name\n                  ofType {\n                    kind\n                    name\n                  }\n                }\n              }\n            }\n          }\n        }\n      }\n    }\n  ", "operationName"=>"IntrospectionQuery"}}
+Completed 500 Internal Server Error in 221ms (ActiveRecord: 0.0ms | Allocations: 4946)
+
+
+  
+SyntaxError (/myapp/app/graphql/mutations/update_transaction.rb:34: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/graphql/mutations/update_transaction.rb:34: syntax error, unexpected end-of-input, expecting `end'
+app/graphql/mutations/update_transaction.rb:34: syntax error, unexpected end-of-input, expecting `end'
+app/graphql/mutations/update_transaction.rb:34: syntax error, unexpected end-of-input, expecting `end'
+app/graphql/types/mutation_type.rb:4:in `<class:MutationType>'
+app/graphql/types/mutation_type.rb:2:in `<module:Types>'
+app/graphql/types/mutation_type.rb:1:in `<top (required)>'
+app/graphql/ledger_schema.rb:2:in `<class:LedgerSchema>'
+app/graphql/ledger_schema.rb:1:in `<top (required)>'
+app/controllers/graphql_controller.rb:15:in `execute'
+Started GET "/graphiql" for 192.168.32.1 at 2022-03-25 03:26:42 +0000
+Cannot render console from 192.168.32.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (4.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by GraphiQL::Rails::EditorsController#show as HTML
+  Parameters: {"graphql_path"=>"/graphql"}
+  Rendering /usr/local/bundle/gems/graphiql-rails-1.8.0/app/views/graphiql/rails/editors/show.html.erb
+  Rendered /usr/local/bundle/gems/graphiql-rails-1.8.0/app/views/graphiql/rails/editors/show.html.erb (Duration: 600.2ms | Allocations: 286892)
+Completed 200 OK in 658ms (Views: 628.5ms | ActiveRecord: 0.0ms | Allocations: 290164)
+
+
+Started POST "/graphql" for 192.168.32.1 at 2022-03-25 03:26:44 +0000
+Cannot render console from 192.168.32.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by GraphqlController#execute as */*
+  Parameters: {"query"=>"\n    query IntrospectionQuery {\n      __schema {\n        \n        queryType { name }\n        mutationType { name }\n        subscriptionType { name }\n        types {\n          ...FullType\n        }\n        directives {\n          name\n          description\n          \n          locations\n          args {\n            ...InputValue\n          }\n        }\n      }\n    }\n\n    fragment FullType on __Type {\n      kind\n      name\n      description\n      \n      fields(includeDeprecated: true) {\n        name\n        description\n        args {\n          ...InputValue\n        }\n        type {\n          ...TypeRef\n        }\n        isDeprecated\n        deprecationReason\n      }\n      inputFields {\n        ...InputValue\n      }\n      interfaces {\n        ...TypeRef\n      }\n      enumValues(includeDeprecated: true) {\n        name\n        description\n        isDeprecated\n        deprecationReason\n      }\n      possibleTypes {\n        ...TypeRef\n      }\n    }\n\n    fragment InputValue on __InputValue {\n      name\n      description\n      type { ...TypeRef }\n      defaultValue\n    }\n\n    fragment TypeRef on __Type {\n      kind\n      name\n      ofType {\n        kind\n        name\n        ofType {\n          kind\n          name\n          ofType {\n            kind\n            name\n            ofType {\n              kind\n              name\n              ofType {\n                kind\n                name\n                ofType {\n                  kind\n                  name\n                  ofType {\n                    kind\n                    name\n                  }\n                }\n              }\n            }\n          }\n        }\n      }\n    }\n  ", "operationName"=>"IntrospectionQuery", "graphql"=>{"query"=>"\n    query IntrospectionQuery {\n      __schema {\n        \n        queryType { name }\n        mutationType { name }\n        subscriptionType { name }\n        types {\n          ...FullType\n        }\n        directives {\n          name\n          description\n          \n          locations\n          args {\n            ...InputValue\n          }\n        }\n      }\n    }\n\n    fragment FullType on __Type {\n      kind\n      name\n      description\n      \n      fields(includeDeprecated: true) {\n        name\n        description\n        args {\n          ...InputValue\n        }\n        type {\n          ...TypeRef\n        }\n        isDeprecated\n        deprecationReason\n      }\n      inputFields {\n        ...InputValue\n      }\n      interfaces {\n        ...TypeRef\n      }\n      enumValues(includeDeprecated: true) {\n        name\n        description\n        isDeprecated\n        deprecationReason\n      }\n      possibleTypes {\n        ...TypeRef\n      }\n    }\n\n    fragment InputValue on __InputValue {\n      name\n      description\n      type { ...TypeRef }\n      defaultValue\n    }\n\n    fragment TypeRef on __Type {\n      kind\n      name\n      ofType {\n        kind\n        name\n        ofType {\n          kind\n          name\n          ofType {\n            kind\n            name\n            ofType {\n              kind\n              name\n              ofType {\n                kind\n                name\n                ofType {\n                  kind\n                  name\n                  ofType {\n                    kind\n                    name\n                  }\n                }\n              }\n            }\n          }\n        }\n      }\n    }\n  ", "operationName"=>"IntrospectionQuery"}}
+Completed 500 Internal Server Error in 196ms (ActiveRecord: 0.0ms | Allocations: 5071)
+
+
+  
+SyntaxError (/myapp/app/graphql/mutations/update_transaction.rb:34: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/graphql/mutations/update_transaction.rb:34: syntax error, unexpected end-of-input, expecting `end'
+app/graphql/mutations/update_transaction.rb:34: syntax error, unexpected end-of-input, expecting `end'
+app/graphql/mutations/update_transaction.rb:34: syntax error, unexpected end-of-input, expecting `end'
+app/graphql/types/mutation_type.rb:4:in `<class:MutationType>'
+app/graphql/types/mutation_type.rb:2:in `<module:Types>'
+app/graphql/types/mutation_type.rb:1:in `<top (required)>'
+app/graphql/ledger_schema.rb:2:in `<class:LedgerSchema>'
+app/graphql/ledger_schema.rb:1:in `<top (required)>'
+app/controllers/graphql_controller.rb:15:in `execute'
+Started GET "/graphiql" for 192.168.32.1 at 2022-03-25 03:27:36 +0000
+Cannot render console from 192.168.32.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by GraphiQL::Rails::EditorsController#show as HTML
+  Parameters: {"graphql_path"=>"/graphql"}
+  Rendering /usr/local/bundle/gems/graphiql-rails-1.8.0/app/views/graphiql/rails/editors/show.html.erb
+  Rendered /usr/local/bundle/gems/graphiql-rails-1.8.0/app/views/graphiql/rails/editors/show.html.erb (Duration: 58.4ms | Allocations: 8828)
+Completed 200 OK in 111ms (Views: 61.0ms | ActiveRecord: 0.0ms | Allocations: 11356)
+
+
+Started POST "/graphql" for 192.168.32.1 at 2022-03-25 03:27:36 +0000
+Cannot render console from 192.168.32.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by GraphqlController#execute as */*
+  Parameters: {"query"=>"\n    query IntrospectionQuery {\n      __schema {\n        \n        queryType { name }\n        mutationType { name }\n        subscriptionType { name }\n        types {\n          ...FullType\n        }\n        directives {\n          name\n          description\n          \n          locations\n          args {\n            ...InputValue\n          }\n        }\n      }\n    }\n\n    fragment FullType on __Type {\n      kind\n      name\n      description\n      \n      fields(includeDeprecated: true) {\n        name\n        description\n        args {\n          ...InputValue\n        }\n        type {\n          ...TypeRef\n        }\n        isDeprecated\n        deprecationReason\n      }\n      inputFields {\n        ...InputValue\n      }\n      interfaces {\n        ...TypeRef\n      }\n      enumValues(includeDeprecated: true) {\n        name\n        description\n        isDeprecated\n        deprecationReason\n      }\n      possibleTypes {\n        ...TypeRef\n      }\n    }\n\n    fragment InputValue on __InputValue {\n      name\n      description\n      type { ...TypeRef }\n      defaultValue\n    }\n\n    fragment TypeRef on __Type {\n      kind\n      name\n      ofType {\n        kind\n        name\n        ofType {\n          kind\n          name\n          ofType {\n            kind\n            name\n            ofType {\n              kind\n              name\n              ofType {\n                kind\n                name\n                ofType {\n                  kind\n                  name\n                  ofType {\n                    kind\n                    name\n                  }\n                }\n              }\n            }\n          }\n        }\n      }\n    }\n  ", "operationName"=>"IntrospectionQuery", "graphql"=>{"query"=>"\n    query IntrospectionQuery {\n      __schema {\n        \n        queryType { name }\n        mutationType { name }\n        subscriptionType { name }\n        types {\n          ...FullType\n        }\n        directives {\n          name\n          description\n          \n          locations\n          args {\n            ...InputValue\n          }\n        }\n      }\n    }\n\n    fragment FullType on __Type {\n      kind\n      name\n      description\n      \n      fields(includeDeprecated: true) {\n        name\n        description\n        args {\n          ...InputValue\n        }\n        type {\n          ...TypeRef\n        }\n        isDeprecated\n        deprecationReason\n      }\n      inputFields {\n        ...InputValue\n      }\n      interfaces {\n        ...TypeRef\n      }\n      enumValues(includeDeprecated: true) {\n        name\n        description\n        isDeprecated\n        deprecationReason\n      }\n      possibleTypes {\n        ...TypeRef\n      }\n    }\n\n    fragment InputValue on __InputValue {\n      name\n      description\n      type { ...TypeRef }\n      defaultValue\n    }\n\n    fragment TypeRef on __Type {\n      kind\n      name\n      ofType {\n        kind\n        name\n        ofType {\n          kind\n          name\n          ofType {\n            kind\n            name\n            ofType {\n              kind\n              name\n              ofType {\n                kind\n                name\n                ofType {\n                  kind\n                  name\n                  ofType {\n                    kind\n                    name\n                  }\n                }\n              }\n            }\n          }\n        }\n      }\n    }\n  ", "operationName"=>"IntrospectionQuery"}}
+Completed 200 OK in 284ms (Views: 4.4ms | ActiveRecord: 0.0ms | Allocations: 33676)
+
+
+Started GET "/graphiql" for 192.168.32.1 at 2022-03-25 03:32:46 +0000
+Cannot render console from 192.168.32.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by GraphiQL::Rails::EditorsController#show as HTML
+  Parameters: {"graphql_path"=>"/graphql"}
+  Rendering /usr/local/bundle/gems/graphiql-rails-1.8.0/app/views/graphiql/rails/editors/show.html.erb
+  Rendered /usr/local/bundle/gems/graphiql-rails-1.8.0/app/views/graphiql/rails/editors/show.html.erb (Duration: 53.1ms | Allocations: 8781)
+Completed 200 OK in 102ms (Views: 55.5ms | ActiveRecord: 0.0ms | Allocations: 11284)
+
+
+Started POST "/graphql" for 192.168.32.1 at 2022-03-25 03:32:47 +0000
+Cannot render console from 192.168.32.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by GraphqlController#execute as */*
+  Parameters: {"query"=>"\n    query IntrospectionQuery {\n      __schema {\n        \n        queryType { name }\n        mutationType { name }\n        subscriptionType { name }\n        types {\n          ...FullType\n        }\n        directives {\n          name\n          description\n          \n          locations\n          args {\n            ...InputValue\n          }\n        }\n      }\n    }\n\n    fragment FullType on __Type {\n      kind\n      name\n      description\n      \n      fields(includeDeprecated: true) {\n        name\n        description\n        args {\n          ...InputValue\n        }\n        type {\n          ...TypeRef\n        }\n        isDeprecated\n        deprecationReason\n      }\n      inputFields {\n        ...InputValue\n      }\n      interfaces {\n        ...TypeRef\n      }\n      enumValues(includeDeprecated: true) {\n        name\n        description\n        isDeprecated\n        deprecationReason\n      }\n      possibleTypes {\n        ...TypeRef\n      }\n    }\n\n    fragment InputValue on __InputValue {\n      name\n      description\n      type { ...TypeRef }\n      defaultValue\n    }\n\n    fragment TypeRef on __Type {\n      kind\n      name\n      ofType {\n        kind\n        name\n        ofType {\n          kind\n          name\n          ofType {\n            kind\n            name\n            ofType {\n              kind\n              name\n              ofType {\n                kind\n                name\n                ofType {\n                  kind\n                  name\n                  ofType {\n                    kind\n                    name\n                  }\n                }\n              }\n            }\n          }\n        }\n      }\n    }\n  ", "operationName"=>"IntrospectionQuery", "graphql"=>{"query"=>"\n    query IntrospectionQuery {\n      __schema {\n        \n        queryType { name }\n        mutationType { name }\n        subscriptionType { name }\n        types {\n          ...FullType\n        }\n        directives {\n          name\n          description\n          \n          locations\n          args {\n            ...InputValue\n          }\n        }\n      }\n    }\n\n    fragment FullType on __Type {\n      kind\n      name\n      description\n      \n      fields(includeDeprecated: true) {\n        name\n        description\n        args {\n          ...InputValue\n        }\n        type {\n          ...TypeRef\n        }\n        isDeprecated\n        deprecationReason\n      }\n      inputFields {\n        ...InputValue\n      }\n      interfaces {\n        ...TypeRef\n      }\n      enumValues(includeDeprecated: true) {\n        name\n        description\n        isDeprecated\n        deprecationReason\n      }\n      possibleTypes {\n        ...TypeRef\n      }\n    }\n\n    fragment InputValue on __InputValue {\n      name\n      description\n      type { ...TypeRef }\n      defaultValue\n    }\n\n    fragment TypeRef on __Type {\n      kind\n      name\n      ofType {\n        kind\n        name\n        ofType {\n          kind\n          name\n          ofType {\n            kind\n            name\n            ofType {\n              kind\n              name\n              ofType {\n                kind\n                name\n                ofType {\n                  kind\n                  name\n                  ofType {\n                    kind\n                    name\n                  }\n                }\n              }\n            }\n          }\n        }\n      }\n    }\n  ", "operationName"=>"IntrospectionQuery"}}
+Completed 200 OK in 315ms (Views: 6.4ms | ActiveRecord: 0.0ms | Allocations: 33553)
+
+
+Started GET "/graphiql" for 192.168.32.1 at 2022-03-25 03:33:54 +0000
+Cannot render console from 192.168.32.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by GraphiQL::Rails::EditorsController#show as HTML
+  Parameters: {"graphql_path"=>"/graphql"}
+  Rendering /usr/local/bundle/gems/graphiql-rails-1.8.0/app/views/graphiql/rails/editors/show.html.erb
+  Rendered /usr/local/bundle/gems/graphiql-rails-1.8.0/app/views/graphiql/rails/editors/show.html.erb (Duration: 50.4ms | Allocations: 8781)
+Completed 200 OK in 106ms (Views: 53.0ms | ActiveRecord: 0.0ms | Allocations: 11284)
+
+
+Started POST "/graphql" for 192.168.32.1 at 2022-03-25 03:33:55 +0000
+Cannot render console from 192.168.32.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by GraphqlController#execute as */*
+  Parameters: {"query"=>"\n    query IntrospectionQuery {\n      __schema {\n        \n        queryType { name }\n        mutationType { name }\n        subscriptionType { name }\n        types {\n          ...FullType\n        }\n        directives {\n          name\n          description\n          \n          locations\n          args {\n            ...InputValue\n          }\n        }\n      }\n    }\n\n    fragment FullType on __Type {\n      kind\n      name\n      description\n      \n      fields(includeDeprecated: true) {\n        name\n        description\n        args {\n          ...InputValue\n        }\n        type {\n          ...TypeRef\n        }\n        isDeprecated\n        deprecationReason\n      }\n      inputFields {\n        ...InputValue\n      }\n      interfaces {\n        ...TypeRef\n      }\n      enumValues(includeDeprecated: true) {\n        name\n        description\n        isDeprecated\n        deprecationReason\n      }\n      possibleTypes {\n        ...TypeRef\n      }\n    }\n\n    fragment InputValue on __InputValue {\n      name\n      description\n      type { ...TypeRef }\n      defaultValue\n    }\n\n    fragment TypeRef on __Type {\n      kind\n      name\n      ofType {\n        kind\n        name\n        ofType {\n          kind\n          name\n          ofType {\n            kind\n            name\n            ofType {\n              kind\n              name\n              ofType {\n                kind\n                name\n                ofType {\n                  kind\n                  name\n                  ofType {\n                    kind\n                    name\n                  }\n                }\n              }\n            }\n          }\n        }\n      }\n    }\n  ", "operationName"=>"IntrospectionQuery", "graphql"=>{"query"=>"\n    query IntrospectionQuery {\n      __schema {\n        \n        queryType { name }\n        mutationType { name }\n        subscriptionType { name }\n        types {\n          ...FullType\n        }\n        directives {\n          name\n          description\n          \n          locations\n          args {\n            ...InputValue\n          }\n        }\n      }\n    }\n\n    fragment FullType on __Type {\n      kind\n      name\n      description\n      \n      fields(includeDeprecated: true) {\n        name\n        description\n        args {\n          ...InputValue\n        }\n        type {\n          ...TypeRef\n        }\n        isDeprecated\n        deprecationReason\n      }\n      inputFields {\n        ...InputValue\n      }\n      interfaces {\n        ...TypeRef\n      }\n      enumValues(includeDeprecated: true) {\n        name\n        description\n        isDeprecated\n        deprecationReason\n      }\n      possibleTypes {\n        ...TypeRef\n      }\n    }\n\n    fragment InputValue on __InputValue {\n      name\n      description\n      type { ...TypeRef }\n      defaultValue\n    }\n\n    fragment TypeRef on __Type {\n      kind\n      name\n      ofType {\n        kind\n        name\n        ofType {\n          kind\n          name\n          ofType {\n            kind\n            name\n            ofType {\n              kind\n              name\n              ofType {\n                kind\n                name\n                ofType {\n                  kind\n                  name\n                  ofType {\n                    kind\n                    name\n                  }\n                }\n              }\n            }\n          }\n        }\n      }\n    }\n  ", "operationName"=>"IntrospectionQuery"}}
+Completed 200 OK in 312ms (Views: 5.9ms | ActiveRecord: 0.0ms | Allocations: 33833)
+
+
+Started POST "/graphql" for 192.168.32.1 at 2022-03-25 03:33:57 +0000
+Cannot render console from 192.168.32.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by GraphqlController#execute as */*
+  Parameters: {"query"=>"mutation {\n  updateTransaction(\n    input: {\n      address: \"0x01b868b3d2c9ccb62168efd82b8db5e9059ee7fe\",\n    \ttxnHash: \"0xb64b160ebbc1870328cb4c0d72fe757e1a5145b608505a14241b0235360947dc\",\n      params: { \n        address: \"0x01b868b3d2c9ccb62168efd82b8db5e9059ee7fe\", \n        txnHash: \"0xb64b160ebbc1870328cb4c0d72fe757e1a5145b608505a14241b0235360947dc\",\n        summary: \"GraphQL mutation tutorials\",\n        from: \"John Doe\",\n        to: \"Jane Doe\",\n        location: \"Mountain View, CA\"\n      }\n    }\n  ) {\n    transaction {\n      id\n      address\n      txnHash\n      summary\n      from\n      to\n      location\n    }\n  }\n}", "variables"=>nil, "graphql"=>{"query"=>"mutation {\n  updateTransaction(\n    input: {\n      address: \"0x01b868b3d2c9ccb62168efd82b8db5e9059ee7fe\",\n    \ttxnHash: \"0xb64b160ebbc1870328cb4c0d72fe757e1a5145b608505a14241b0235360947dc\",\n      params: { \n        address: \"0x01b868b3d2c9ccb62168efd82b8db5e9059ee7fe\", \n        txnHash: \"0xb64b160ebbc1870328cb4c0d72fe757e1a5145b608505a14241b0235360947dc\",\n        summary: \"GraphQL mutation tutorials\",\n        from: \"John Doe\",\n        to: \"Jane Doe\",\n        location: \"Mountain View, CA\"\n      }\n    }\n  ) {\n    transaction {\n      id\n      address\n      txnHash\n      summary\n      from\n      to\n      location\n    }\n  }\n}", "variables"=>nil}}
+  [1m[36mTransaction Load (4.2ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."address" = $1 AND "transactions"."txn_hash" = $2 LIMIT $3[0m  [["address", "0x01b868b3d2c9ccb62168efd82b8db5e9059ee7fe"], ["txn_hash", "0xb64b160ebbc1870328cb4c0d72fe757e1a5145b608505a14241b0235360947dc"], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTransaction Update (0.7ms)[0m  [1m[33mUPDATE "transactions" SET "summary" = $1, "location" = $2 WHERE "transactions"."id" = $3[0m  [["summary", "GraphQL mutation tutorials"], ["location", "Mountain View, CA"], ["id", 20]]
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+              Failed to implement Transaction.id, tried:
+
+              - `Types::TransactionType#id`, which did not exist
+              - `TrueClass#id`, which did not exist
+              - Looking up hash key `:id` or `"id"` on `true`, but it wasn't a Hash
+
+              To implement this field, define one of the methods above (and check for typos)
+
+/usr/local/bundle/gems/graphql-2.0.4/lib/graphql/schema/field.rb:672:in `block (2 levels) in resolve'
+/usr/local/bundle/gems/graphql-2.0.4/lib/graphql/schema/field.rb:766:in `with_extensions'
+/usr/local/bundle/gems/graphql-2.0.4/lib/graphql/schema/field.rb:629:in `block in resolve'
+/usr/local/bundle/gems/graphql-2.0.4/lib/graphql/schema.rb:1000:in `after_lazy'
+/usr/local/bundle/gems/graphql-2.0.4/lib/graphql/schema/field.rb:627:in `resolve'
+/usr/local/bundle/gems/graphql-2.0.4/lib/graphql/execution/interpreter/runtime.rb:502:in `block (3 levels) in evaluate_selection_with_args'
+/usr/local/bundle/gems/graphql-2.0.4/lib/graphql/tracing.rb:65:in `trace'
+/usr/local/bundle/gems/graphql-2.0.4/lib/graphql/execution/interpreter/runtime.rb:501:in `block (2 levels) in evaluate_selection_with_args'
+/usr/local/bundle/gems/graphql-2.0.4/lib/graphql/execution/interpreter/runtime.rb:806:in `call_method_on_directives'
+/usr/local/bundle/gems/graphql-2.0.4/lib/graphql/execution/interpreter/runtime.rb:498:in `block in evaluate_selection_with_args'
+/usr/local/bundle/gems/graphql-2.0.4/lib/graphql/execution/interpreter/runtime.rb:905:in `after_lazy'
+/usr/local/bundle/gems/graphql-2.0.4/lib/graphql/execution/interpreter/runtime.rb:436:in `evaluate_selection_with_args'
+/usr/local/bundle/gems/graphql-2.0.4/lib/graphql/execution/interpreter/runtime.rb:425:in `evaluate_selection'
+/usr/local/bundle/gems/graphql-2.0.4/lib/graphql/execution/interpreter/runtime.rb:358:in `block (2 levels) in evaluate_selections'
+/usr/local/bundle/gems/graphql-2.0.4/lib/graphql/dataloader.rb:181:in `block in run'
+/usr/local/bundle/gems/graphql-2.0.4/lib/graphql/dataloader.rb:303:in `block in spawn_fiber'
+Completed 500 Internal Server Error in 125ms (Views: 0.4ms | ActiveRecord: 35.9ms | Allocations: 8957)
+
+
+Started GET "/graphiql" for 192.168.32.1 at 2022-03-25 03:34:25 +0000
+Cannot render console from 192.168.32.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by GraphiQL::Rails::EditorsController#show as HTML
+  Parameters: {"graphql_path"=>"/graphql"}
+  Rendering /usr/local/bundle/gems/graphiql-rails-1.8.0/app/views/graphiql/rails/editors/show.html.erb
+  Rendered /usr/local/bundle/gems/graphiql-rails-1.8.0/app/views/graphiql/rails/editors/show.html.erb (Duration: 52.0ms | Allocations: 8776)
+Completed 200 OK in 104ms (Views: 54.5ms | ActiveRecord: 0.0ms | Allocations: 11278)
+
+
+Started POST "/graphql" for 192.168.32.1 at 2022-03-25 03:34:26 +0000
+Cannot render console from 192.168.32.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by GraphqlController#execute as */*
+  Parameters: {"query"=>"\n    query IntrospectionQuery {\n      __schema {\n        \n        queryType { name }\n        mutationType { name }\n        subscriptionType { name }\n        types {\n          ...FullType\n        }\n        directives {\n          name\n          description\n          \n          locations\n          args {\n            ...InputValue\n          }\n        }\n      }\n    }\n\n    fragment FullType on __Type {\n      kind\n      name\n      description\n      \n      fields(includeDeprecated: true) {\n        name\n        description\n        args {\n          ...InputValue\n        }\n        type {\n          ...TypeRef\n        }\n        isDeprecated\n        deprecationReason\n      }\n      inputFields {\n        ...InputValue\n      }\n      interfaces {\n        ...TypeRef\n      }\n      enumValues(includeDeprecated: true) {\n        name\n        description\n        isDeprecated\n        deprecationReason\n      }\n      possibleTypes {\n        ...TypeRef\n      }\n    }\n\n    fragment InputValue on __InputValue {\n      name\n      description\n      type { ...TypeRef }\n      defaultValue\n    }\n\n    fragment TypeRef on __Type {\n      kind\n      name\n      ofType {\n        kind\n        name\n        ofType {\n          kind\n          name\n          ofType {\n            kind\n            name\n            ofType {\n              kind\n              name\n              ofType {\n                kind\n                name\n                ofType {\n                  kind\n                  name\n                  ofType {\n                    kind\n                    name\n                  }\n                }\n              }\n            }\n          }\n        }\n      }\n    }\n  ", "operationName"=>"IntrospectionQuery", "graphql"=>{"query"=>"\n    query IntrospectionQuery {\n      __schema {\n        \n        queryType { name }\n        mutationType { name }\n        subscriptionType { name }\n        types {\n          ...FullType\n        }\n        directives {\n          name\n          description\n          \n          locations\n          args {\n            ...InputValue\n          }\n        }\n      }\n    }\n\n    fragment FullType on __Type {\n      kind\n      name\n      description\n      \n      fields(includeDeprecated: true) {\n        name\n        description\n        args {\n          ...InputValue\n        }\n        type {\n          ...TypeRef\n        }\n        isDeprecated\n        deprecationReason\n      }\n      inputFields {\n        ...InputValue\n      }\n      interfaces {\n        ...TypeRef\n      }\n      enumValues(includeDeprecated: true) {\n        name\n        description\n        isDeprecated\n        deprecationReason\n      }\n      possibleTypes {\n        ...TypeRef\n      }\n    }\n\n    fragment InputValue on __InputValue {\n      name\n      description\n      type { ...TypeRef }\n      defaultValue\n    }\n\n    fragment TypeRef on __Type {\n      kind\n      name\n      ofType {\n        kind\n        name\n        ofType {\n          kind\n          name\n          ofType {\n            kind\n            name\n            ofType {\n              kind\n              name\n              ofType {\n                kind\n                name\n                ofType {\n                  kind\n                  name\n                  ofType {\n                    kind\n                    name\n                  }\n                }\n              }\n            }\n          }\n        }\n      }\n    }\n  ", "operationName"=>"IntrospectionQuery"}}
+Completed 200 OK in 292ms (Views: 5.8ms | ActiveRecord: 0.0ms | Allocations: 33818)
+
+
+Started POST "/graphql" for 192.168.32.1 at 2022-03-25 03:34:28 +0000
+Cannot render console from 192.168.32.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by GraphqlController#execute as */*
+  Parameters: {"query"=>"mutation {\n  updateTransaction(\n    input: {\n      address: \"0x01b868b3d2c9ccb62168efd82b8db5e9059ee7fe\",\n    \ttxnHash: \"0xb64b160ebbc1870328cb4c0d72fe757e1a5145b608505a14241b0235360947dc\",\n      params: { \n        address: \"0x01b868b3d2c9ccb62168efd82b8db5e9059ee7fe\", \n        txnHash: \"0xb64b160ebbc1870328cb4c0d72fe757e1a5145b608505a14241b0235360947dc\",\n        summary: \"GraphQL mutation tutorials\",\n        from: \"John Doe\",\n        to: \"Jane Doe\",\n        location: \"Mountain View, CA\"\n      }\n    }\n  ) {\n    transaction {\n      id\n      address\n      txnHash\n      summary\n      from\n      to\n      location\n    }\n  }\n}", "variables"=>nil, "graphql"=>{"query"=>"mutation {\n  updateTransaction(\n    input: {\n      address: \"0x01b868b3d2c9ccb62168efd82b8db5e9059ee7fe\",\n    \ttxnHash: \"0xb64b160ebbc1870328cb4c0d72fe757e1a5145b608505a14241b0235360947dc\",\n      params: { \n        address: \"0x01b868b3d2c9ccb62168efd82b8db5e9059ee7fe\", \n        txnHash: \"0xb64b160ebbc1870328cb4c0d72fe757e1a5145b608505a14241b0235360947dc\",\n        summary: \"GraphQL mutation tutorials\",\n        from: \"John Doe\",\n        to: \"Jane Doe\",\n        location: \"Mountain View, CA\"\n      }\n    }\n  ) {\n    transaction {\n      id\n      address\n      txnHash\n      summary\n      from\n      to\n      location\n    }\n  }\n}", "variables"=>nil}}
+  [1m[36mTransaction Load (0.6ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."address" = $1 AND "transactions"."txn_hash" = $2 LIMIT $3[0m  [["address", "0x01b868b3d2c9ccb62168efd82b8db5e9059ee7fe"], ["txn_hash", "0xb64b160ebbc1870328cb4c0d72fe757e1a5145b608505a14241b0235360947dc"], ["LIMIT", 1]]
+Completed 200 OK in 73ms (Views: 0.2ms | ActiveRecord: 4.2ms | Allocations: 7528)
+
+
+Started POST "/graphql" for 192.168.32.1 at 2022-03-25 03:35:15 +0000
+Cannot render console from 192.168.32.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by GraphqlController#execute as */*
+  Parameters: {"query"=>"{\n  transactions(address: \"0x01b868b3d2c9ccb62168efd82b8db5e9059ee7fe\") {\n    id\n    address\n    txnHash\n    summary\n    from\n    to\n    location\n  }\n}\n", "variables"=>nil, "graphql"=>{"query"=>"{\n  transactions(address: \"0x01b868b3d2c9ccb62168efd82b8db5e9059ee7fe\") {\n    id\n    address\n    txnHash\n    summary\n    from\n    to\n    location\n  }\n}\n", "variables"=>nil}}
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" WHERE "transactions"."address" = $1[0m  [["address", "0x01b868b3d2c9ccb62168efd82b8db5e9059ee7fe"]]
+Completed 200 OK in 220ms (Views: 0.2ms | ActiveRecord: 3.0ms | Allocations: 11609)
+
+

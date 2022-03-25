@@ -16,7 +16,7 @@ module Queries
   end
 end
 
-=begin
+<<-DOC
 
 QUERIES:
 
@@ -50,4 +50,4 @@ QUERY VARIABLES:
   "address": "0x43085ac677366bd8c114df35a41bf8266aa2142a"
 }
 
-=end
+DOC
