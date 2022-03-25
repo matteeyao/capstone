@@ -43,7 +43,21 @@ $ docker-compose run web bundle exec rspec
 
 ```
 $ docker-compose up db
-$ docker-compose run web bundle exec rails db:migrate:reset
+$ docker-compose exec web bundle exec rails db:migrate:reset
+```
+
+**Delete and rebuild database**:
+
+This will reset your database and reload your current schema w/ all:
+
+```zsh
+$ docker-compose exec web rake db:reset db:migrate
+```
+
+This will destroy your db, create it, and then migrate your current schema:
+
+```zsh
+$ docker-compose exec web rake db:drop db:create db:migrate
 ```
 
 ### run rails console
@@ -55,13 +69,51 @@ $ docker-compose run web rails c
 ### generate migration
 
 ```
-docker-compose run web bundle exec rails g migration <migrationName>
+$ docker-compose exec web bundle exec rails g migration <migrationName>
 ```
 
 ... and then run:
 
 ```
-$ docker-compose run web bundle exec rails db:migrate:reset
+$ docker-compose exec web bundle exec rails db:migrate:reset
 ```
+
+### rolling back all migrations
+
+To rollback all migrations:
+
+```zsh
+$ docker-compose exec web rake db:migrate VERSION=0
+```
+
+Then, run all migrations again with:
+
+```zsh
+$ docker-compose exec web rake db:migrate
+```
+
+### retting the database
+
+**Reset**
+
+```zsh
+$ docker-compose exec web rake db:migrate:reset #runs db:drop db:create db:migrate
+```
+
+This method drops the database and runs the migrations again.
+
+**Loading the last schema**
+
+```zsh
+$ docker-compose exec web rake db:reset
+```
+
+### seed the database
+
+```zsh
+$ docker-compose exec web rake db:seed
+```
+
+This method will drop the database and load the data from the last schema.
 
 Navigate to http://localhost:3000

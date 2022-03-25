@@ -1,4 +1,4 @@
-# Using GraphQL w/ Ruby on Rails
+# [Using GraphQL w/ Ruby on Rails](https://www.apollographql.com/blog/community/backend/using-graphql-with-ruby-on-rails/)
 
 **Objective**: Learn how to create a new project w/ Ruby on Rails and GraphQL while setting it up to use React and Apollo. The focus is on getting the API running and executing a query.
 
@@ -85,3 +85,206 @@ class Artist < ApplicationRecord
     has_many :items, dependent: :destroy
 end
 ```
+
+We will need some pre-generated data to work w/ and render to our page. In the `db/seeds/rb` add the following contents and save the file.
+
+```rb
+taylor = Artist.create!(
+  email: "taylor.swift@example.com",
+  first_name: "Taylor",
+  last_name: "Swift"
+)
+
+Item.create!(
+  [
+    {
+      title: "Red (Taylor's Version)",
+      description: "Loving him is like driving a new Maserati down a dead-end street...",
+      artist: taylor,
+      image_url: "https://static.wikia.nocookie.net/taylor-swift/images/9/93/Red_%28Taylor%27s_Version%29.jpeg/revision/latest/scale-to-width-down/1000?cb=20210618181243"
+    },
+    {
+      title: "All Too Well (Taylor's Version)",
+      description: "It was rare, I was there, I remember it all too well",
+      artist: taylor,
+      image_url: "https://static.wikia.nocookie.net/taylor-swift/images/9/93/Red_%28Taylor%27s_Version%29.jpeg/revision/latest/scale-to-width-down/1000?cb=20210618181243"
+    },
+    {
+      title: "We Are Never Ever Getting Back Together (Taylor's Version)",
+      description: "You go talk to your friends, talk to my friends, talk to me",
+      artist: taylor,
+      image_url: "https://static.wikia.nocookie.net/taylor-swift/images/9/93/Red_%28Taylor%27s_Version%29.jpeg/revision/latest/scale-to-width-down/1000?cb=20210618181243"
+    },
+    {
+      title: "Begin Again (Taylor's Version)",
+      description: "But on a Wednesday in a café, I watched it begin again",
+      artist: taylor,
+      image_url: "https://static.wikia.nocookie.net/taylor-swift/images/9/93/Red_%28Taylor%27s_Version%29.jpeg/revision/latest/scale-to-width-down/1000?cb=20210618181243"
+    }
+  ]
+)
+```
+
+To initialize the database run the following command in your console:
+
+```zsh
+rails db:create db:migrate db:seed
+```
+
+**Recap**: What have we done so far in our Ruby on Rails and GraphQL project? We generated our Rails API. Now let's add GraphQL and write our first query.
+
+## Adding GraphQL to a Ruby on Rails project
+
+To create our Rails-GraphQL API, let's use a ruby gem called `graphql-ruby`. It will add many files to our project. It will add a lot of files that weill help run our project. To add the gem, run the following line in your console followed by the generator.
+
+```zsh
+bundle add graphql 
+```
+
+```zsh
+rails generate graphql:install 
+```
+
+or, if using `docker-compose`:
+
+```zsh
+docker-compose exec web bundle exec rails generate graphql:install
+```
+
+A Rails generator is used for automating the process of creating files with boilerplate code. It creates and updates files based on templates, etc. 
+
+Let's poke around in the files and see what we got! Check out the schema file, `taypi_schema.rb` (`ledger_schema.rb` in our case). This is where it declares where all the queries should go and set up mutations.
+
+```rb
+class TaypiSchema < GraphQL::Schema
+  mutation(Types::MutationType)
+  query(Types::QueryType)
+end 
+```
+
+Let's get this app running. Look at the `config/routes.rb` file. The generator is very helpful here. It is mounting `graphiql::Rails::Engine` for us. This allows us to test queries and mutation using the handy web interface, GraphiQL. Think of it as building out documentation and a fun place to test out your queries on the web.
+
+```rb
+Rails.application.routes.draw do
+  if Rails.env.development?
+    mount GraphiQL::Rails::Engine, at: "/graphiql", graphql_path: "/graphql"
+  end
+  post "/graphql", to: "graphql#execute"
+end
+```
+
+Alternatively, you can use the [Apollo Studio Explorer](https://www.apollographql.com/docs/studio/explorer/). It's Apollo's web IDE for creating, running, and managing your GraphQL operations.
+
+## Write and execute a Rails-GraphQL query w/ GraphiQL
+
+We are going to add more information to our TAY-PI so we can write our first GraphQL query in our Rails project.
+
+We're going to remove some of the example content and add a field called `:items` in the `query_type.rb` file, so we can get all the items returned. Notice the new `items` method added here. Each field type contains a name (items), a result type/options (`[Types::ItemType]`, and `:null` is required and set to `true` or `false`). The description is optional but good to have since it helps w/ documentation.
+
+```rb
+module Types
+  class QueryType < Types::BaseObject
+    include GraphQL::Types::Relay::HasNodeField
+    include GraphQL::Types::Relay::HasNodesField
+
+    field :items,
+    [Types::ItemType],
+    null: false,
+    description: "Return a list of items"
+
+    def items
+      Item.all
+    end
+  end
+end
+```
+
+We now want to generate the `ItemType` using the GraphQL Ruby gem. In your console, enter the following command:
+
+```zsh
+rails g graphql:object item
+```
+
+or, if using `docker-compose`:
+
+```zsh
+docker-compose exec web bundle install
+docker-compose exec web bundle exec rails g graphql:object item
+```
+
+Now we need to update the `types/item_type.rb` file to include the fields that have a type and nullable option.
+
+```rb
+  module Types
+    class ItemType < Types::BaseObject
+      field :id, ID, null: false
+      field :title, String, null: true
+      field :description, String, null: true
+      field :image_url, String, null: true
+      field :artist_id, Integer, null: false
+      field :artist, Types::ArtistType, null: false
+      field :created_at, GraphQL::Types::ISO8601DateTime, null: false
+      field :updated_at, GraphQL::Types::ISO8601DateTime, null: false
+    end
+  end
+```
+
+You might be thinking, how does this all work? It looks for the method w/ the same name defined in the class time (thanks rails magic!) Now let's do the same thing, but for the `ArtistType`.
+
+In your console, enter the following command:
+
+```zsh
+rails g graphql:object artist
+```
+
+In the `artist_type.rb` file add the `full_name` method and the `full_name` field:
+
+```rb
+  module Types
+    class ArtistType < Types::BaseObject
+      field :id, ID, null: false
+      field :first_name, String, null: true
+      field :last_name, String, null: true
+      field :email, String, null: true
+      field :created_at, GraphQL::Types::ISO8601DateTime, null: false
+      field :updated_at, GraphQL::Types::ISO8601DateTime, null: false
+  
+      def full_name 
+        [object.first_name, object.last_name].compact.join("")
+      end 
+    end
+  end
+```
+
+We now have enough code to start your rails server. Run `rails s` in your console and open up GraphiQL (http://localhost:3000/graphiql) in your web browser. In GraphiQL, run the following query. We can type in a query to run w/ the data we added to our `db/seeds` file and get a response back.
+
+![Graphiql "items" query and data response](https://wp.apollographql.com/wp-content/uploads/2021/11/graphiql-tay-pi-1024x662.png)
+
+Wait, how is Rails doing all this? Let's look at the logs in your rails server console:
+
+![Rails server console logs](https://wp.apollographql.com/wp-content/uploads/2021/11/rails-console-1024x180.png)
+
+The GraphQL gem created the `GraphQLController` for us. It is where requests are sent to. Within this file, you can see that the execute method/action does a lot of work for us.
+
+```rb
+def execute
+    variables = prepare_variables(params[:variables])
+    query = params[:query]
+    operation_name = params[:operationName]
+    context = {
+    }
+    result = TaypiSchema.execute(query, variables: variables, context: context, operation_name: operation_name)
+    render json: result
+  rescue StandardError => e
+    raise e unless Rails.env.development?
+    handle_error_in_development(e)
+end
+```
+
+We did a GraphQL query w/ Ruby on Rails. We are now fetching artists/users along w/ items.
+
+## Conclusion
+
+We did it! We created a new Ruby on Rails project using the `graphql-ruby` gem. We then configured our first GraphQL query that fetches data for our Taylor Swift API aka TAY-PI. Our TAY-PI can be expanded and is flexible enough to add more data when needed. Next, we can explore mutations w/ a Ruby on Rails project to make it more advanced and to take it a step further. To start your frontend work w/ React and Apollo check out this article, [Get Started w/ Apollo Client](https://www.apollographql.com/docs/react/get-started/).
+
+Since GraphQL is non-language dependent, it allows different types of projects to have the ability to use it, and it's especially fun w/ Ruby on Rails.
