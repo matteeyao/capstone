@@ -8,15 +8,23 @@ RSpec.describe Transaction, type: :model do
   # adjust the attributes here as well.
   let(:valid_attributes) do
     {
-      title: 'A new ledger transaction',
-      body: 'The body of the transaction'
+      txn_hash: '0x0c3a287ce8b9617dbb2b5b7299076dde7a43edde6f19709c0becd046856076e5',
+      summary: 'Specify goods/services transacted for here',
+      from: 'John Doe',
+      to: 'Jane Doe',
+      location: '100 W. Lake St. Addison IL 60101 630-628-0358',
+      address: '0x8c469877b27932abdd2313c4b6bf7cff5667fdb9'
     }
   end
 
   let(:invalid_attributes) do
     {
-      title: nil,
-      body: nil
+      txn_hash: nil,
+      summary: nil,
+      from: nil,
+      to: nil,
+      location: nil,
+      address: nil
     }
   end
 

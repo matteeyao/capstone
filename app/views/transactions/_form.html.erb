@@ -12,18 +12,33 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :title %>
-    <%= form.text_field :title, id: :transaction_title %>
+    <%= form.label :address %>
+    <%= form.text_field :address, id: :transaction_address %>
   </div>
 
   <div class="field">
-    <%= form.label :body %>
-    <%= form.text_area :body, id: :transaction_body %>
+    <%= form.label :txn_hash %>
+    <%= form.text_field :txn_hash, id: :transaction_txn_hash %>
   </div>
 
   <div class="field">
-    <%= form.label :published %>
-    <%= form.check_box :published, id: :transaction_published %>
+    <%= form.label :from %>
+    <%= form.text_field :from, id: :transaction_from %>
+  </div>
+
+  <div class="field">
+    <%= form.label :to %>
+    <%= form.text_field :to, id: :transaction_to %>
+  </div>
+
+  <div class="field">
+    <%= form.label :summary %>
+    <%= form.text_area :summary, id: :transaction_summary %>
+  </div>
+
+  <div class="field">
+    <%= form.label :location %>
+    <%= form.text_area :location, id: :transaction_location %>
   </div>
 
   <div class="actions">

@@ -1,4 +1,4 @@
 # frozen_string_literal: true
 
-json.extract! transaction, :id, :title, :body, :published, :created_at, :updated_at
+json.extract! transaction, :id, :txn_hash, :summary, :from, :to, :location, :address
 json.url transaction_url(transaction, format: :json)
