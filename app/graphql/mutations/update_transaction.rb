@@ -55,4 +55,48 @@ mutation {
   }
 }
 
+MUTATION:
+
+mutation UpdateTransactionMetadata(
+  $address: String!, 
+  $txnHash: String!, 
+  $summary: String,
+  $from: String,
+  $to: String,
+  $location: String,
+) {
+  updateTransaction(input: {
+    address: $address,
+    txnHash: $txnHash,
+    params: { 
+      address: $address, 
+      txnHash: $txnHash,
+      summary: $summary,
+      from: $from,
+      to: $to,
+      location: $location
+    }
+  }) {
+    transaction {
+      address
+      txnHash
+      summary
+      from
+      to
+      location
+    }
+  }
+}
+
+QUERY VARIABLES:
+
+{
+  "address": "0x8c469877b27932abdd2313c4b6bf7cff5667fdb9",
+  "txnHash": "0xeed97c10473725c4350da1dd3441db316e9ca1d2c5e06c68989be89b5bb8017c",
+  "summary": "GraphQL tutorials",
+  "from": "John Doe",
+  "to": "Jane Doe",
+  "location": "25 East Washington Suite 509 Chicago IL 60602"
+}
+
 DOC
