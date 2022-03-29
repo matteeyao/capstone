@@ -39,6 +39,14 @@ Transaction.create!(
             to: 'Volodymyr Zelenskyy',
             location: 'M. Hrushevskoho str., 12/2 Kyiv, Ukraine, 01008',
             address: '0x43085ac677366bd8c114df35a41bf8266aa2142a'
+        },
+        {
+            txn_hash: '0xda668344813fa243297482585acf02f912843a816136f519a069f3b2dda7a1c3',
+            summary: 'Test transaction',
+            from: 'John Doe',
+            to: 'Jane Doe',
+            location: 'Yosemite National Park',
+            address: '0x8c469877b27932abdd2313c4b6bf7cff5667fdb9'
         }
   ]
 )
