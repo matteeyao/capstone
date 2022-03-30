@@ -99,3 +99,7 @@ About
 *.env
 
 .byebug_history
+
+/config/master.key
+
+config/master.key
