@@ -21,12 +21,6 @@ POSTGRES_DB=rails_ledger_dev
 
 ### Starting the application
 
-Ensure `tmp/db` is cleared out by running:
-
-```zsh
-rm -rf tmp/db
-```
-
 ```
 $ docker-compose build
 $ docker-compose up
@@ -116,4 +110,4 @@ $ docker-compose exec web rake db:seed
 
 This method will drop the database and load the data from the last schema.
 
-Navigate to http://localhost:3000
+Navigate to http://localhost:3080
