@@ -7,7 +7,7 @@
 
 Rails.application.config.middleware.insert_before 0, Rack::Cors do
   allow do
-    origins Rails.env.development? ? '*' : 'https://capstone-svr.herokuapp.com/'
+    origins '*'
 
     resource '*',
       headers: :any,
