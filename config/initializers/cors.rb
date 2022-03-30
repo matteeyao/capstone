@@ -7,7 +7,7 @@
 
 Rails.application.config.middleware.insert_before 0, Rack::Cors do
   allow do
-    origins 'capstone-svr.herokuapp.com'
+    origins 'capstone-svr.herokuapp.com/graphql'
 
     resource '*',
       headers: :any,
