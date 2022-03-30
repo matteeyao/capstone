@@ -27439,3 +27439,13 @@ HTTP Origin header (http://localhost:3000) didn't match request.base_url (http:/
 Completed 200 OK in 9ms (Views: 0.3ms | ActiveRecord: 0.8ms | Allocations: 1410)
 
 
+Started GET "/" for 172.19.0.1 at 2022-03-30 03:02:07 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (4.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TransactionsController#index as HTML
+  Rendering transactions/index.html.erb within layouts/application
+  [1m[36mTransaction Load (5.6ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions"[0m
+  Rendered transactions/index.html.erb within layouts/application (Duration: 30.0ms | Allocations: 4829)
+Completed 200 OK in 1544ms (Views: 1469.8ms | ActiveRecord: 9.8ms | Allocations: 315909)
+
+
