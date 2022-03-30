@@ -1,15 +1,5 @@
 version: '3'
 services:
-  client:
-    image: "node:10-alpine"
-    working_dir: /myapp/client
-    volumes:
-      - ./client:/myapp/client
-    ports:
-      - "3000:3000"
-    command: "yarn start"
-    depends_on:
-      - backend
   db:
     image: postgres:9.5
     volumes:
