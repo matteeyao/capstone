@@ -89,5 +89,12 @@ Rails.application.configure do
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
 
+  config.hosts = [
+    IPAddr.new("0.0.0.0/0"), # All IPv4 addresses.
+    IPAddr.new("::/0"),      # All IPv6 addresses.
+    "localhost",             # The localhost reserved domain.
+    "subscription_service"   # Allow this to be addressed when running in containers via docker-compose.yml.
+  ]
+
   config.hosts << "capstone-svr.herokuapp.com"
 end
