@@ -99,6 +99,4 @@ Rails.application.configure do
   ]
 
   config.hosts << "capstone-svr.herokuapp.com"
-
-  config.logger = Logger.new(STDOUT)
 end
